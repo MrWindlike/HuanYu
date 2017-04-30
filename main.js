@@ -2,11 +2,11 @@ require('./style/normalize.css')
 require('./style/style.scss')
 require('./style/nav.scss')
 require('./style/hotClass.scss')
-require('./style/artical.scss')
-require('./style/carousel.scss')
-require('./style/aside.scss')
-require('./style/loggin.scss')
-require('./style/footer.scss')
+require('./style/artical.scss');
+require('./style/carousel.scss');
+require('./style/aside.scss');
+require('./style/loggin.scss');
+require('./style/footer.scss');
 
 
 window.$ = window.jQuery = require('./js/jQuery.js')
