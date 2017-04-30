@@ -1,4 +1,4 @@
-webpackJsonp([1],[
+webpackJsonp([2],[
 /* 0 */
 /***/ (function(module, exports) {
 
@@ -2041,156 +2041,51 @@ module.exports = __webpack_amd_options__;
 
 /***/ }),
 /* 8 */,
-/* 9 */
-/***/ (function(module, exports) {
-
-(function ($) {
-	var register = function (element, options) {
-		this.element = element;
-		this.userOptions = options;
-		this.defaultOptions = register.default;
-		this.options = $.extend({}, this.defaultOptions, this.userOptions);
-		this._init();
-		this._eventInit();
-	};
-
-	register.default = {};
-
-	register.prototype = {
-		_init: function () {},
-		_eventInit: function () {
-			var $password = this.element.find('[data-type|="password"]');
-			var inputs = this.element.find('.input');
-			var url = "http://www.guozewei.cn/test";
-			this.element.find('[data-type!="password"]').on('blur', function () {
-				var _this = this;
-				if ($(this).attr('data-type') === 'username' && $(this).val() !== '') {
-					var match = /^[A-Za-z][A-Za-z1-9_-]+$/;
-					if (!match.test($(this).val())) {
-						$(this).addClass('input-danger');
-						$($(this).siblings('.alert')[0]).css('opacity', '1').html('用户名（字母开头 + 数字/字母/下划线）');
-						return;
-					} else {
-						$(this).removeClass('input-danger');
-						$($(this).siblings('.alert')[0]).css('opacity', '0');
-					}
-				} else if ($(this).attr('data-type') === 'phonenum' && $(this).val() !== '') {
-					var match = /^1[34578]\d{9}$/;
-					if (!match.test($(this).val())) {
-						$(this).addClass('input-danger');
-						$($(this).siblings('.alert')[0]).css('opacity', '1').html('手机号码格式不正确');
-						return;
-					} else {
-						$(this).removeClass('input-danger');
-						$($(this).siblings('.alert')[0]).css('opacity', '0');
-					}
-				} else if ($(this).attr('data-type') === 'email' && $(this).val() !== '') {
-					var match = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
-					if (!match.test($(this).val())) {
-						$(this).addClass('input-danger');
-						$($(this).siblings('.alert')[0]).css('opacity', '1').html('邮箱格式不正确');
-						return;
-					} else {
-						$(this).removeClass('input-danger');
-						$($(this).siblings('.alert')[0]).css('opacity', '0');
-					}
-				}
-				$.ajax({
-					url: url,
-					type: "POST",
-					dataType: "JSON",
-					data: {
-						key: $(_this).attr('data-type'),
-						val: $(_this).val()
-					},
-					success: function (data) {}
-				});
-			});
-
-			$password.on('blur', function () {
-				if ($($password[0]).val() !== '' && $($password[1]).val() !== '' && $($password[0]).val() !== $($password[1]).val()) {
-					$($($password[1]).siblings('.alert')[0]).css('opacity', '1').html('两次输入的密码不一致！');
-					$($password[1]).addClass('input-danger');
-				} else {
-					$($($password[1]).siblings('.alert')[0]).css('opacity', '0');
-					$($password[1]).removeClass('input-danger');
-				}
-			});
-
-			this.element.find('button').on('click', function () {
-				var flag = true;
-				/*for(i in inputs){
-    	if($(inputs[i]).val()===''){
-    		$(inputs[i]).addClass('input-danger');
-    		$($(inputs[i]).siblings('.alert')[0]).css('opacity','1').html('该项不能为空！');
-    		flag = false;
-    	}
-    	else{
-    		$(inputs[i]).removeClass('input-danger');
-    		$($(inputs[i]).siblings('.alert')[0]).css('opacity','0');
-    	}
-    }*/
-				if (!flag) return;
-				$.ajax({
-					url: "http://www.guozewei.cn/resister",
-					type: "POST",
-					dataType: "JSON",
-					data: {
-						usename: $(inputs[0]).val(),
-						password: $(inputs[1]).val(),
-						email: $(inputs[3]).val(),
-						phonenum: $(inputs[4]).val()
-
-					},
-					success: function (data) {}
-				});
-			});
-		}
-	};
-
-	$.fn.register = function (options) {
-		return this.each(function () {
-			if (!$(this).data("register")) $(this).data("register", new register($(this), options));
-		});
-	};
-})(jQuery);
-
-/***/ }),
-/* 10 */,
-/* 11 */
+/* 9 */,
+/* 10 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 11 */,
 /* 12 */,
 /* 13 */,
 /* 14 */,
 /* 15 */,
 /* 16 */,
 /* 17 */,
-/* 18 */
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
 __webpack_require__(6);
 __webpack_require__(5);
 __webpack_require__(4);
-__webpack_require__(11);
 __webpack_require__(3);
+__webpack_require__(10);
 
 window.$ = window.jQuery = __webpack_require__(1);
 
+$('.item').mouseover(function () {
+	var _this = $(this);
+	$(this).find('ul').css({ "display": "block" });
+	$('.bg').stop().animate({ 'left': _this.index() * 110 + 'px' }, 100);
+	_this.find("ul").addClass('active').stop().animate({ "opacity": 1 }, 100);
+	_this.siblings().find("ul").removeClass('active').stop().animate({ "opacity": 0 }, 100);
+});
 $('#nav').stop().mouseleave(function () {
 	$('.bg').stop().animate({ 'left': 0 }, 1000);
 	$('.item ul').css({ "display": "none" });
 });
 
-/***********loggin*************/
+/*loggin*/
 __webpack_require__(0);
 
 $("#bg").input();
-$("#register").input({ left: "0em" });
 
 $("#bg>*:not(svg)").on("click", function (event) {
 	event.stopPropagation();
@@ -2206,19 +2101,5 @@ $("#header .logButton").on('click', function () {
 	$("#bg").fadeIn(300);
 });
 
-/*****************************/
-/***********register**********/
-__webpack_require__(9);
-
-$("#register").register();
-/*****************************/
-$('.item').mouseover(function () {
-	var _this = $(this);
-	$(this).find('ul').css({ "display": "block" });
-	$('.bg').stop().animate({ 'left': _this.index() * 110 + 'px' }, 100);
-	_this.find("ul").addClass('active').stop().animate({ "opacity": 1 }, 100);
-	_this.siblings().find("ul").removeClass('active').stop().animate({ "opacity": 0 }, 100);
-});
-
 /***/ })
-],[18]);
+],[21]);
