@@ -1,0 +1,51 @@
+@import "~./style/Windlike";
+#register{
+	width:1200px;
+	padding:5em;
+	margin:5em auto;
+	border:rgba(0,0,0,.3) 1px solid;
+	background:rgb(243,244,245);
+
+	.title{
+		@include gradient-line($color:#bbb);
+		display: block;
+		width: 360px;
+		padding:1em calc(175px - 1em);
+		//border-bottom: 3px blue solid;
+		margin:0 auto;
+	}
+	.inputBox{
+		margin:1em auto;
+		text-align: center;
+	
+		.inputWrap{
+			display: inline-block;
+			margin: 2em auto 0 auto;
+			position: relative;
+
+			.text{
+				transition: all .3s ease;
+				position: absolute;
+				z-index: 5;
+				color:#555;
+				top: .25em;
+				left:1em;
+			}
+		}
+
+		.successButton{
+			@include button($type:success);
+			display: block;
+			width: 300px;
+			margin: 1.5em auto;
+		}
+	}
+
+	.input{
+		@include input;
+		width: 300px;
+		display: block;
+		margin: 0 auto;
+
+	}
+}

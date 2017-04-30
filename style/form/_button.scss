@@ -1,0 +1,27 @@
+@mixin button($color:#337ab7, $textColor:white, $type:none){
+	display:inline-block;
+	padding:.3em .8em;
+	border:1px solid rgba(0,0,0,.1);
+	@if $type == danger {$color:#c00;}
+	@else if $type == success {$color:#5cb85c;}
+	@else if $type == info {$color:#5bc0de;}
+	@else if $type == warning {$color:#f0ad4e;}
+	@else if $type == primary {$color:#337ab7;}
+
+	background:$color linear-gradient(hsla(0,0%,100%,.2), transparent);
+	border-radius:.2em;
+	box-shadow:0 .05em .25em gray;
+	color:$textColor;
+	text-shadow:0 -.05em .05em #335166;
+	font-size:125%;
+	line-height:1.5;
+	cursor:pointer;
+
+	&:hover{
+		background-color:lighten($color, 5);
+	}
+
+	&:active{
+		background-color:darken($color, 5);
+	}
+}

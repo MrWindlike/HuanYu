@@ -1,0 +1,21 @@
+@mixin glass-shine($time:1s){
+	&:hover{
+		animation: glassShine $time ease infinite;
+	}
+
+	@keyframes glassShine{
+
+		0% { 
+			background-image:linear-gradient(135deg,transparent 30%, rgba(255,255,255,.4) 0, rgba(255,255,255,.4) 37.5%, transparent 0);
+			background-size:200% 100%;
+			background-position:100%;
+			background-repeat: no-repeat;
+		}
+		100% { 
+			background-image:linear-gradient(135deg,transparent 30%, rgba(255,255,255,.6) 0, rgba(255,255,255,.6) 37.5%, transparent 0);
+			background-size:200% 100%;
+			background-position:-100%;
+			background-repeat: no-repeat;
+		}
+	}
+}

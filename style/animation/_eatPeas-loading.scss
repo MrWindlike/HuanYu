@@ -1,0 +1,64 @@
+@mixin eatPeas-loading($background:#333,$length:40px,$time:0.3s){
+	margin:0 auto;
+	position:relative;
+	width: $length;
+	height:$length;
+
+	@keyframes rotate{
+		to {transform: rotate(0deg); }
+	}
+	
+	.halfCircle{
+		width: $length;
+		height:50%;
+		background:$background;
+		position:absolute;
+		animation:rotate $time linear infinite alternate;
+		animation-delay:$time;
+
+		
+
+		&:nth-of-type(1){
+			left: 0;
+			top: 0px;
+			transform: rotate(-45deg);
+			border-radius:50px 50px 0 0;
+			transform-origin:bottom center;
+		}
+
+		&:nth-of-type(2){
+			left: 0;
+			top: 50%;
+			transform: rotate(45deg);
+			border-radius:0 0 50px 50px;
+			transform-origin:top center;
+		}
+	}
+	@keyframes ballMove{
+		to {transform: translate(10px);opacity:1;}
+	}
+
+	.ball{
+		width: 10px;
+		height:10px;
+		background:$background;
+		border-radius:50%;
+		opacity:0;
+		position:absolute;
+		top: calc(50% - 5px);
+		transform: translate(160px);
+		animation:ballMove linear $time*4 infinite;
+
+		&:nth-of-type(2){
+			transform: translate(110px); 
+			animation:ballMove linear $time*2;
+			animation-fill-mode:forwards;
+		}
+		&:nth-of-type(3){
+			animation-delay:$time*2;
+		}
+		&:nth-of-type(4){
+			animation-delay:$time*4;
+		}
+	}
+}

@@ -1,0 +1,52 @@
+@mixin square-loading($color:#555,$time:1.5s,$length:40px){
+	margin:auto;
+	transform: rotate(45deg);
+	width: $length;
+	height:$length;
+	
+	.squareLoading{
+		float: left;
+		display: inline-block;
+		width: 33.33%;
+		height:33.33%;
+		background:$color;
+		animation: ease $time infinite;
+
+		&:nth-of-type(1){
+			animation-name: scale-1;
+		}
+		&:nth-of-type(2){
+			animation-name: scale-3;
+		}
+		&:nth-of-type(3){
+			animation-name: scale-6;
+		}
+		&:nth-of-type(4){
+			animation-name: scale-2;
+		}
+		&:nth-of-type(5){
+			animation-name: scale-5;
+		}
+		&:nth-of-type(6){
+			animation-name: scale-8;
+		}
+		&:nth-of-type(7){
+			animation-name: scale-4;
+		}
+		&:nth-of-type(8){
+			animation-name: scale-7;
+		}
+		&:nth-of-type(9){
+			animation-name: scale-9;
+		}
+	}
+	
+	$num : 9;
+	@for $i from $num through 1{
+		@keyframes scale-#{$num - $i + 1}{
+			#{($num - $i)*(100/($num + 1))}%  {transform:scale(0);}
+			#{($num - $i + 1)*100/($num + 1)}% {transform:scale(1);}
+			100% {transform:scale(1);}
+		}
+	}
+}

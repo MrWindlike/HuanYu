@@ -1,0 +1,132 @@
+@import "~./Windlike";
+#header{
+	width:100%;
+	background:rgb(249,249,249);
+	height:60px;
+	border:#eee 1px solid;
+
+	.headerWrap{
+		width: 1200px;
+		margin:0 auto;
+		.logo{
+			float:left;
+			vertical-align:middle;
+			height:60px;
+
+			.name{
+				vertical-align:middle;
+				display: inline-block;
+				font-size:1.5em;
+				margin-top: calc(0.5em - 60px);
+			}
+		}
+
+		.logButton{
+			@include button($type:success);
+			font-weight: bold;
+			display: inline-block;
+			height: 50px;
+			margin-top: 5px;
+			float: right;
+			line-height: 50px;
+			padding:0 1em;
+		}
+		
+		
+	}
+}
+ul{
+	list-style: none;
+}
+#nav{
+	min-width:1200px;
+	width:100%;
+	position: relative;
+	height: 60px;
+	margin: 0 auto;
+	text-align: center;
+	z-index:3;
+	background:rgb(249,249,249);
+	border:#eee 1px solid;
+
+	
+	.text{
+		vertical-align:middle;
+		display: inline-block;
+		font-size:1.2em;
+		line-height: 60px;
+	}
+	
+} 
+
+#nav ul.navs{
+	@include clearfix;
+	display:inline-block;
+	position: relative;
+	float:left;
+
+}
+
+#nav ul li.item{
+	float: left;
+	width: 110px;
+	height: 60px;
+	padding:0 15px;
+	line-height: 60px;
+}
+
+#nav .bg{
+	position: absolute;
+	width: 110px;
+	height: 60px;
+	background: #31c27c;
+	top:0;
+}
+.naver{
+	font-weight: bold;
+	color:black;
+}
+.item{
+	position:relative;
+	z-index:2;
+}
+.item:hover .naver{
+	color:white;
+}
+.item ul{
+	position: absolute;
+	display: none;
+	opacity: 0;
+}
+.item ul li{
+	width:110px;
+	font-size: 15px;
+	line-height: 25px;
+	text-align: center;
+	padding:.5em 0;
+	border:darken(#31c27c, 5) 1px solid;
+	cursor:pointer;
+	&:hover{
+		background:darken(#31c27c, 5);
+
+		a{
+			color:white;
+		}
+	}
+
+	a{
+		color:black;
+	}
+}
+
+
+
+.item .active{
+	margin: auto -15px;
+	display: block;
+	background: lighten(#31c27c, 5);
+}
+#navs{
+	width:1200px;
+	margin:0 auto;
+}
