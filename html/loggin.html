@@ -11,7 +11,13 @@
 					<img src="./dist/assets/img/logo.png" style="margin-right:1em;" width="60px"><span class="name">深圳市创新工匠投资咨询有限公司</span>
 				</div>
 				<div class="logButton" href="loggin.html">登录/注册</div>
-				
+				<div class="user">
+					<div class="username iconfont">Windlike &#xe620;</div>
+					<div class="menus">
+						<div class="menu iconfont">&#xe606; 个人资料</div>
+						<div class="menu iconfont">&#xe60e; 注销</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="nav">
@@ -100,10 +106,38 @@
 					<div class="text iconfont">&#xe60b; 联系电话</div>
 					<div class="alert"></div>
 				</label><br>
-				<button class="successButton">注册</button>
+				<svg width="300" height="54" style="margin-top: 2em;" xmlns="http://www.w3.org/2000/svg">
+					<g id="registerbutton">
+						<rect x="1.5" y="2" width="298" height="50" ry="25" class="rect">
+							<!-- click -->
+							<animate id="registerclick" attributeName="width" attributeType="XML" from="298" to="50" begin="indefinite" dur="0.3s" fill="freeze" restart="never"/>
+							<animate attributeName="x" attributeType="XML" from="1.5" to="125" begin="registerclick.begin" dur="0.3s" fill="freeze" restart="never"/>
+							<animate attributeName="stroke" attributeType="XML" from="#19CC94" to="gray" begin="registerclick.begin" dur="0.3s" fill="freeze" restart="never"/>
+							<animate attributeName="fill" attributeType="XML" from="white" to="white" begin="registerclick.begin" dur="0.3s" fill="freeze" restart="never"/>
+							<!-- loadend -->
+							<animate id="regsterok" attributeName="width" attributeType="XML" from="50" to="99%" begin="regiserload.end" dur="0.3s" fill="freeze"/>
+							<animate attributeName="x" attributeType="XML" from="125" to="1.5" begin="regiserload.end" dur="0.3s" fill="freeze"/>
+							<animate attributeName="stroke" attributeType="XML" from="gray" to="#19CC94" begin="regiserload.end" dur="0.01s" fill="freeze"/>
+							<animate attributeName="fill" attributeType="XML" from="white" to="#19CC94" begin="regiserload.end" dur="0.01s" fill="freeze"/>
+						</rect>
+
+						<text x="45%" y="32" class="text">
+						注册
+							<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="registerclick.begin" dur="0.01s" fill="freeze" restart="never"/>
+						</text>
+					</g>
+
+					<path d="M150,2,A25,25,0,1,1,149.9,2" id="circle">
+						<animate id="regiserload" attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="registerclick.end" dur="1s" fill="freeze"/>
+						<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="regiserload.end" dur="0.01s" fill="freeze"/>
+					</path>
+
+					<polyline points="135 25, 150 40, 175 15" class="arrow">
+						<animate attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="regsterok.end" dur="0.5s" fill="freeze"/>
+					</polyline>
+				</svg>
 			</div>
 		</div>
-		
 	</main>
 	<div id="bg">
 		<div class="loggin">
@@ -111,10 +145,12 @@
 			<label class="inputWrap">	
 				<input type="text" class="input iconfont">
 				<div class="text iconfont">&#xe606; 账号</div>
+				<div class="alert"></div>
 			</label>
 			<label class="inputWrap">
 				<input type="password" class="input iconfont">
 				<div class="text iconfont">&#xe603; 密码</div>
+				<div class="alert"></div>
 			</label>
 			
 			<a href="loggin.html" class="link">注册</a>
@@ -122,10 +158,10 @@
 				<g id="button">
 					<rect x="1.5" y="2" width="268" height="50" ry="25" class="rect">
 						<!-- click -->
-						<animate id="click" attributeName="width" attributeType="XML" from="268" to="50" begin="button.click" dur="0.3s" fill="freeze" restart="never"/>
-						<animate attributeName="x" attributeType="XML" from="1.5" to="110" begin="button.click" dur="0.3s" fill="freeze" restart="never"/>
-						<animate attributeName="stroke" attributeType="XML" from="#19CC94" to="gray" begin="button.click" dur="0.3s" fill="freeze" restart="never"/>
-						<animate attributeName="fill" attributeType="XML" from="white" to="white" begin="button.click" dur="0.3s" fill="freeze" restart="never"/>
+						<animate id="click" attributeName="width" attributeType="XML" from="268" to="50" begin="indefinite" dur="0.3s" fill="freeze" restart="never"/>
+						<animate attributeName="x" attributeType="XML" from="1.5" to="110" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+						<animate attributeName="stroke" attributeType="XML" from="#19CC94" to="gray" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+						<animate attributeName="fill" attributeType="XML" from="white" to="white" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
 						<!-- loadend -->
 						<animate id="ok" attributeName="width" attributeType="XML" from="50" to="99%" begin="load.end" dur="0.3s" fill="freeze"/>
 						<animate attributeName="x" attributeType="XML" from="110" to="1.5" begin="load.end" dur="0.3s" fill="freeze"/>
@@ -135,7 +171,7 @@
 
 					<text x="45%" y="32" class="text">
 					登录
-						<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="button.click" dur="0.01s" fill="freeze" restart="never"/>
+						<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="click.begin" dur="0.01s" fill="freeze" restart="never"/>
 					</text>
 				</g>
 
