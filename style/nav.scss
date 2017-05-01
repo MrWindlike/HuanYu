@@ -31,8 +31,54 @@
 			line-height: 50px;
 			padding:0 1em;
 		}
-		
-		
+		.user{
+			display: none;
+			position:relative;
+			cursor: pointer;
+			float:right;
+			.username{
+				line-height: 60px;
+				font-size: 1.2em;
+				padding:0 0.5em;
+				border-left:1px #aaa solid; 
+				border-right:1px #aaa solid; 
+
+				&:hover{
+					background:rgba(0,0,0,.1);
+
+				}
+			}
+
+			&:hover .menus{
+				opacity:1;
+			}
+
+			.menus{
+				opacity:0;
+				width: 180px;
+				position:absolute;
+				top: 60px;
+				right: 0;
+				z-index: 5;
+				text-align:center;
+				transition: opacity ease .4s;
+
+				.menu{
+					padding:0.5em 0;
+					border:1px #aaa solid; 
+					background:white;
+					
+
+					&:nth-of-type(1){
+						border-top:#08c 3px solid;
+					}
+
+					&:hover{
+						background:darken(white, 5);
+					}
+				}
+			}
+		}
 	}
 }
 ul{

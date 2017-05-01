@@ -1,11 +1,11 @@
 @import "~./Windlike";
 @font-face {
   font-family: 'iconfont';  /* project id 290618 */
-  src: url('http://at.alicdn.com/t/font_qltc6hhhw5j6ecdi.eot');
-  src: url('http://at.alicdn.com/t/font_qltc6hhhw5j6ecdi.eot?#iefix') format('embedded-opentype'),
-  url('http://at.alicdn.com/t/font_qltc6hhhw5j6ecdi.woff') format('woff'),
-  url('http://at.alicdn.com/t/font_qltc6hhhw5j6ecdi.ttf') format('truetype'),
-  url('http://at.alicdn.com/t/font_qltc6hhhw5j6ecdi.svg#iconfont') format('svg');
+  src: url('http://at.alicdn.com/t/font_qz8wzprsjs4qjjor.eot');
+  src: url('http://at.alicdn.com/t/font_qz8wzprsjs4qjjor.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_qz8wzprsjs4qjjor.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_qz8wzprsjs4qjjor.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_qz8wzprsjs4qjjor.svg#iconfont') format('svg');
 }
 
 *{
@@ -69,3 +69,51 @@ a{
 	}
 }
 
+svg{
+	margin: 1em auto;
+	display: block;
+	fill:none;
+
+	& *:focus{
+		outline: 0;
+	}
+
+	path{
+		stroke-dasharray: 200;
+		stroke-dashoffset: 200;
+	}
+
+	&:hover{
+		.rect{
+			fill:#19CC94;
+		}
+
+		.text{
+			stroke:white;
+		}
+	}
+
+
+	#circle{
+		stroke-width:3;
+		stroke:#19CC94;
+	}
+
+	.rect{
+		cursor:pointer;
+		stroke:#19CC94;
+		stroke-width:3;
+	}
+
+	.text{
+		cursor:pointer;
+		stroke:#19CC94;
+
+	}
+	.arrow{
+		stroke:white;
+		stroke-width:3;
+		stroke-dasharray: 200;
+		stroke-dashoffset: 200;
+	}
+}

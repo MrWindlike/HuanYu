@@ -77,49 +77,8 @@
 			}
 		}
 
-		path{
-			stroke-dasharray: 200;
-			stroke-dashoffset: 200;
-		}
+		
 
-		svg{
-			margin: 1em auto;
-			display: block;
-			fill:none;
-
-			&:hover{
-				.rect{
-					fill:#19CC94;
-				}
-
-				.text{
-					stroke:white;
-				}
-			}
-
-
-			#circle{
-				stroke-width:3;
-				stroke:#19CC94;
-			}
-
-			.rect{
-				cursor:pointer;
-				stroke:#19CC94;
-				stroke-width:3;
-			}
-
-			.text{
-				cursor:pointer;
-				stroke:#19CC94;
-
-			}
-			.arrow{
-				stroke:white;
-				stroke-width:3;
-				stroke-dasharray: 200;
-				stroke-dashoffset: 200;
-			}
-		}
+		
 	}
 }
