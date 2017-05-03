@@ -10,7 +10,8 @@ module.exports = {
     loggin : './loggin.js',
     view : './view.js',
     artical :'./artical.js',
-    introduce :'./introduce.js' 
+    introduce :'./introduce.js' ,
+    signUp:'./signUp.js'
   },
   output: { 
     path: path.join(__dirname, 'dist'), //输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
@@ -40,8 +41,8 @@ module.exports = {
   plugins: [
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendors', // 将公共模块提取，生成名为`vendors`的chunk
-        chunks: ['index','loggin', 'artical', 'view','introduce'], //提取哪些模块共有的部分
-        minChunks: 5 // 提取至少3个模块共有的部分
+        chunks: ['index','loggin', 'artical', 'view','introduce','signUp'], //提取哪些模块共有的部分
+        minChunks: 6 // 提取至少3个模块共有的部分
       }),
       new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
         //favicon: './src/img/favicon.ico', //favicon路径，通过webpack引入同时可以生成hash值
@@ -98,7 +99,18 @@ module.exports = {
           removeComments: true, //移除HTML中的注释
           collapseWhitespace: false //删除空白符与换行符
         }
-      })
+      }),
+      new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
+        //favicon: './src/img/favicon.ico', //favicon路径，通过webpack引入同时可以生成hash值
+        filename: './signUp.html', //生成的html存放路径，相对于path
+        template: path.resolve(__dirname, './html/signUp.html'), //html模板路径
+        inject: 'body', //js插入的位置，true/'head'/'body'/false
+        chunks: ['vendors', 'signUp'],//需要引入的chunk，不配置就会引入所有页面的资源
+        minify: { //压缩HTML文件  
+          removeComments: true, //移除HTML中的注释
+          collapseWhitespace: false //删除空白符与换行符
+        }
+      }),
 
   ]
 }
