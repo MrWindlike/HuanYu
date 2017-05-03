@@ -44,7 +44,7 @@
             var url = window.location.search.slice(4);
             console.log(url);
             $.ajax({
-                url: "/detail",
+                url: "http://www.guozewei.cn/detail",
                 type: "POST",
                 data: {
                     _id: url

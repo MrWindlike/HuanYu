@@ -6,6 +6,7 @@
 body{
   min-width: 1200px;
   width: 100%;
+  background-color: white;
 }
 
 a{
@@ -47,11 +48,9 @@ header.top .iconfont{
 }
 
 header.top.top{
-  background: #EDEDED;
   padding: 10px;
   margin-bottom: 20px;
   height: 40px;
-  border-bottom: 1px #ccc solid;
 }
 
 header.top.top .word{
@@ -136,12 +135,13 @@ header.top.top .word{
 .main_wrap .main .more{
   cursor: pointer;
   text-align: center;
-  padding-top: 20px;
   background: #EDEDED;
   height:50px;
   font-size: 20px;
 }
-
+.main_wrap .main .more span{
+  line-height:50px;
+}
 .main_wrap .main .more{
     color: #E67219;
 }

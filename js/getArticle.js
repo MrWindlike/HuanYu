@@ -30,7 +30,7 @@
     }
 
     var Default = {
-        limit: "1"           //每次加载的文章的数量
+        limit: "5"           //每次加载的文章的数量
 
     }
     GetArticle.prototype = {
@@ -56,7 +56,7 @@
             var _this = this;
             $.ajax({
                 type: "POST",
-                url: "/article",
+                url: "http://www.guozewei.cn/article",
                 data: {
                     page: _this.page,
                     limit: _this.limit

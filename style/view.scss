@@ -6,6 +6,7 @@
 body{
   min-width: 1200px;
   width: 100%;
+  background: white;
 }
 
 a{
@@ -42,12 +43,9 @@ header.top .iconfont{
 
 header.top{
   width:1200px;
-  background: #EDEDED;
   padding: 10px;
-  margin:0 auto;
-  margin-bottom: 20px;
+  margin:10px auto;
   height: 40px;
-  border-bottom: 1px #ccc solid;
 }
 
 header.top .word{
