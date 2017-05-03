@@ -7,26 +7,26 @@ var Check = require("./js/Check.js")
 $(function(){
 
 	var url = window.location.search;
-		if(url){
+	if(url){
 
+		$(".navigation .item").toggleClass("active");
+		$(".train").toggleClass("show");
+		$(".train").toggleClass("hide");
+		$(".competition").toggleClass("show");
+		$(".competition").toggleClass("hide");
+	}
+
+	$(".navigation .item").click (function(){
+		if($(".result").hasClass("show")){	//在报名成功页面显示的时候点击导航时执行
+			Return();
+		}
+		if(!$(this).hasClass("active")){
 			$(".navigation .item").toggleClass("active");
 			$(".train").toggleClass("show");
 			$(".train").toggleClass("hide");
 			$(".competition").toggleClass("show");
 			$(".competition").toggleClass("hide");
-	}
-
-	$(".navigation .item").click (function(){
-			if($(".result").hasClass("show")){	//在报名成功页面显示的时候点击导航时执行
-				Return();
-			}
-			if(!$(this).hasClass("active")){
-				$(".navigation .item").toggleClass("active");
-				$(".train").toggleClass("show");
-				$(".train").toggleClass("hide");
-				$(".competition").toggleClass("show");
-				$(".competition").toggleClass("hide");
-			}					
+		}					
 	});
 	$(".sex label").click(function(){
 		var index = $(".sex label").index(this);
@@ -268,7 +268,6 @@ $(function(){
 							seniority:seniority,
 						},
 						success:function(result){
-							console.log(result);
 							dealwithResult(result);
 						},
 					});
@@ -291,8 +290,16 @@ $(function(){
 			$("section .result").removeClass("hide").addClass("show");
 			if(result.success){
 				$(".fail").addClass("hide");
+				if($(".success").hasClass("hide")){
+					$(".success").removeClass("hide");
+				}
+				$(".success .iconfont").css("color","#31c27c");
 			}else{
 				$(".success").addClass("hide");
+				if($(".fail").hasClass("hide")){
+					$(".fail").removeClass("hide");
+				}
+				$(".fail .iconfont").css("color","red")
 			}
 
 
@@ -317,8 +324,10 @@ $(function(){
 		$(".navigation .item").removeClass("active");
 		$($(".navigation .item")[0]).addClass("active");
 
-		$("input:not([type='button'])").val("");
+		//清空表格填写内容
+		$("input[type='text']").val("");
 		$(".sex .circle").addClass("hide");
 		$("input:checkbox").prop("checked",false);
+		$(".container .select .selection ").html("--请选择--");
     }
 })
