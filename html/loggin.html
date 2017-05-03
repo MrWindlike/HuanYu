@@ -43,10 +43,10 @@
 							<li><a href="javascript:;">职业技能培训</a></li>
 						</ul>
 					</li>
-					<li class="item"><a href="javascript:;" class="naver">在线报名</a>
+					<li class="item"><a href="/signUp.html" class="naver">在线报名</a>
 						<ul>
-							<li><a href="javascript:;">培训报名</a></li>
-							<li><a href="javascript:;">竞赛报名</a></li>
+							<li><a href="/signUp.html">培训报名</a></li>
+							<li><a href="/signUp.html?show=competition">竞赛报名</a></li>
 						</ul>
 					</li>
 					<li class="item"><a href="javascript:;" class="naver">在线学习</a>
@@ -65,10 +65,10 @@
 						</ul>
 					</li>
 					</li>
-					<li class="item"><a href="javascript:;" class="naver">了解环宇</a>
+					<li class="item"><a href="/introduce.html" class="naver">了解环宇</a>
 						<ul>
-							<li><a href="javascript:;">关于环宇</a></li>
-							<li><a href="javascript:;">学校资讯</a></li>
+							<li><a href="/introduce.html">关于环宇</a></li>
+							<li><a href="/article.html">学校资讯</a></li>
 							<li><a href="school.html">学校风采</a></li>
 							<li><a href="javascript:;">考试指南</a></li>
 						</ul>
@@ -140,53 +140,53 @@
 		</div>
 	</main>
 	<div id="bg">
-		<div class="loggin">
-			<div class="title">登录</div>
-			<label class="inputWrap">	
-				<input type="text" class="input iconfont">
-				<div class="text iconfont">&#xe606; 账号</div>
-				<div class="alert"></div>
-			</label>
-			<label class="inputWrap">
-				<input type="password" class="input iconfont">
-				<div class="text iconfont">&#xe603; 密码</div>
-				<div class="alert"></div>
-			</label>
-			
-			<a href="loggin.html" class="link">注册</a>
-			<svg width="270" height="54" xmlns="http://www.w3.org/2000/svg">
-				<g id="button">
-					<rect x="1.5" y="2" width="268" height="50" ry="25" class="rect">
-						<!-- click -->
-						<animate id="click" attributeName="width" attributeType="XML" from="268" to="50" begin="indefinite" dur="0.3s" fill="freeze" restart="never"/>
-						<animate attributeName="x" attributeType="XML" from="1.5" to="110" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
-						<animate attributeName="stroke" attributeType="XML" from="#19CC94" to="gray" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
-						<animate attributeName="fill" attributeType="XML" from="white" to="white" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
-						<!-- loadend -->
-						<animate id="ok" attributeName="width" attributeType="XML" from="50" to="99%" begin="load.end" dur="0.3s" fill="freeze"/>
-						<animate attributeName="x" attributeType="XML" from="110" to="1.5" begin="load.end" dur="0.3s" fill="freeze"/>
-						<animate attributeName="stroke" attributeType="XML" from="gray" to="#19CC94" begin="load.end" dur="0.01s" fill="freeze"/>
-						<animate attributeName="fill" attributeType="XML" from="white" to="#19CC94" begin="load.end" dur="0.01s" fill="freeze"/>
-					</rect>
+				<div class="loggin">
+					<div class="title">登录</div>
+					<label class="inputWrap">	
+						<input type="text" class="input">
+						<div class="text"><i class="iconfont">&#xe606;</i> 账号</div>
+						<div class="alert"></div>
+					</label>
+					<label class="inputWrap">
+						<input type="password" class="input">
+						<div class="text"><i class="iconfont">&#xe603;</i> 密码</div>
+						<div class="alert"></div>
+					</label>
+					
+					<a href="loggin.html" class="link">注册</a>
+					<svg width="270" height="54" xmlns="http://www.w3.org/2000/svg">
+						<g id="button">
+							<rect x="1.5" y="2" width="268" height="50" ry="25" class="rect">
+								<!-- click -->
+								<animate id="click" attributeName="width" attributeType="XML" from="268" to="50" begin="indefinite" dur="0.3s" fill="freeze" restart="never"/>
+								<animate attributeName="x" attributeType="XML" from="1.5" to="110" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+								<animate attributeName="stroke" attributeType="XML" from="#19CC94" to="gray" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+								<animate attributeName="fill" attributeType="XML" from="white" to="white" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+								<!-- loadend -->
+								<animate id="ok" attributeName="width" attributeType="XML" from="50" to="99%" begin="load.end" dur="0.3s" fill="freeze"/>
+								<animate attributeName="x" attributeType="XML" from="110" to="1.5" begin="load.end" dur="0.3s" fill="freeze"/>
+								<animate attributeName="stroke" attributeType="XML" from="gray" to="#19CC94" begin="load.end" dur="0.01s" fill="freeze"/>
+								<animate attributeName="fill" attributeType="XML" from="white" to="#19CC94" begin="load.end" dur="0.01s" fill="freeze"/>
+							</rect>
 
-					<text x="45%" y="32" class="text">
-					登录
-						<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="click.begin" dur="0.01s" fill="freeze" restart="never"/>
-					</text>
-				</g>
+							<text x="45%" y="32" class="text">
+							登录
+								<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="click.begin" dur="0.01s" fill="freeze" restart="never"/>
+							</text>
+						</g>
 
-				<path d="M135,2,A25,25,0,1,1,134.9,2" id="circle">
-					<animate id="load" attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="click.end" dur="1s" fill="freeze"/>
-					<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="load.end" dur="0.01s" fill="freeze"/>
-				</path>
+						<path d="M135,2,A25,25,0,1,1,134.9,2" id="circle">
+							<animate id="load" attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="click.end" dur="1s" fill="freeze"/>
+							<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="load.end" dur="0.01s" fill="freeze"/>
+						</path>
 
-				<polyline points="120 25, 135 40, 160 15" class="arrow">
-					<animate attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="ok.end" dur="0.5s" fill="freeze"/>
-				</polyline>
-			</svg>
-			<div class="closeButton iconfont">&#xe736;</div>
-		</div>
-	</div> 
+						<polyline points="120 25, 135 40, 160 15" class="arrow">
+							<animate attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="ok.end" dur="0.5s" fill="freeze"/>
+						</polyline>
+					</svg>
+					<div class="closeButton iconfont">&#xe736;</div>
+				</div>
+			</div>  
 	<div class="footer">
 		<div class="flexBox">
 			<div class="left">

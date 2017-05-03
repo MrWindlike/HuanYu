@@ -73,12 +73,8 @@
 			transition: transform .5s ease;
 
 			&:hover{
-				transform: rotate(180deg);
+				transform: rotate(180deg) scale(1.15);
 			}
 		}
-
-		
-
-		
 	}
 }

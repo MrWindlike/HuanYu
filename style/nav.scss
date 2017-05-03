@@ -49,12 +49,8 @@
 				}
 			}
 
-			&:hover .menus{
-				opacity:1;
-			}
-
 			.menus{
-				opacity:0;
+				display: none;
 				width: 180px;
 				position:absolute;
 				top: 60px;

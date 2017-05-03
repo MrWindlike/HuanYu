@@ -83,6 +83,10 @@
 						else{
 							$(_this).removeClass('input-danger');
 							$($(_this).siblings('.alert')[0]).css('opacity','0');
+							Cookies.unset("username");
+							Cookies.unset("password");
+							Cookies.set("username", $(inputs[0]).val(), new Date().setDate(new Date().getDate() + 30));
+							Cookies.set("password", $(inputs[1]).val(), new Date().setDate(new Date().getDate() + 30));
 						}
 
 					}

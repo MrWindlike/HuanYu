@@ -1,9 +1,10 @@
 require('./style/hotClass.scss')
 require('./style/artical.scss')
-require('./style/carousel.scss')
+require('./style/carousel.scss') 
 require('./style/aside.scss')
 
 require('./js/js.js')
+require('./js/Wind.js')
 require('./js/carousel.js')
 
 
@@ -17,3 +18,13 @@ $(window).on("scroll",function(){
 });
 
 $(".carousel").carousel({num:5,path:"./dist/assets/img/"});
+
+$.ajax({
+	url : "http://www.guozewei.cn/title",
+	type: "GET",
+	dataType : "JSON",
+	success : function(data){
+		console.log(data);
+	}
+		
+});

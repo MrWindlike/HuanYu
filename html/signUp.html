@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="header">
+		<div class="headerWrap">
+			<div class="logo">
+				<img src="./dist/assets/img/logo.png" style="margin-right:1em;" width="60px"><span class="name">深圳市创新工匠投资咨询有限公司</span>
+			</div>
+			<div class="logButton" href="loggin.html">登录/注册</div>
+			<div class="user">
+				<div class="username iconfont">Windlike &#xe620;</div>
+				<div class="menus">
+					<div class="menu iconfont">&#xe606; 个人资料</div>
+					<div class="menu iconfont">&#xe60e; 注销</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="nav">
+		<div id="navs">		
+			<span class="text iconfont" style="float:right">&#xe60b; 咨询电话:0755-82780808</span>
+			<ul class="navs">
+				<li class="item"><a href="index.html" class="naver" style="color: #3882b0">首页</a>
+				</li>
+				<li class="item"><a href="javascript:;" class="naver">创业服务</a>
+					<ul>
+						<li><a href="javascript:;">创业政策</a></li>
+						<li><a href="javascript:;">创业项目</a></li>
+						<li><a href="javascript:;">就业服务</a></li>
+						<li><a href="javascript:;">招生信息</a></li>
+						<li><a href="javascript:;">职业指导</a></li>
+					</ul>
+				</li>
+				<li class="item"><a href="javascript:;" class="naver">培训项目</a>
+					<ul>
+						<li><a href="javascript:;">企业内训</a></li>
+						<li><a href="javascript:;">再就业培训</a></li>
+						<li><a href="javascript:;">职业技能培训</a></li>
+					</ul>
+				</li>
+				<li class="item"><a href="/signUp.html" class="naver">在线报名</a>
+					<ul>
+						<li><a href="/signUp.html">培训报名</a></li>
+						<li><a href="/signUp.html?show=competition">竞赛报名</a></li>
+					</ul>
+				</li>
+				<li class="item"><a href="javascript:;" class="naver">在线学习</a>
+					<ul>
+						<li><a href="javascript:;">相关资料</a></li>
+						<li><a href="javascript:;">在线视频</a></li>
+						<li><a href="javascript:;">在线测试</a></li>
+					</ul>
+				</li>
+				<li class="item"><a href="javascript:;" class="naver">下载专区</a>
+					<ul>
+						<li><a href="javascript:;">竞赛说明</a></li>
+						<li><a href="javascript:;">竞赛报名表</a></li>
+						<li><a href="javascript:;">工作证明模板</a></li>
+						<li><a href="javascript:;">更多下载</a></li>
+					</ul>
+				</li>
+				</li>
+				<li class="item"><a href="javascript:;" class="naver">了解环宇</a>
+					<ul>
+						<li><a href="javascript:;">关于环宇</a></li>
+						<li><a href="javascript:;">学校资讯</a></li>
+						<li><a href="school.html">学校风采</a></li>
+						<li><a href="javascript:;">考试指南</a></li>
+					</ul>
+				</li>
+				<div class="bg"></div>
+			</ul>
+		</div>
+	</div>
+	<div class="schedule">
+		<span class="line finish"></span><!-- &#xe600; -->
+		<span class="circle"><i class="finish iconfont ">&#xe619;</i></span>
+		<span class="line"></span>
+		<span class="circle"><i class="iconfont">&#xe61a;</i></span>
+		<span class="line"></span>
+		<div class="content">
+			<span class="firstStep">填写报名信息</span>
+			<span class="secondStep">报名成功</span>
+		</div>
+	</div>
+	<section id="form">
+		<div class="navigation">
+			<div class="item active">培训报名</div>
+			<div class="item">竞赛报名</div>
+		</div><!-- 
+	 --><form action="" class="train show">
+			<div style="position: relative;">
+				姓名
+				<input name="name" type="text" autofocus>
+				<div class="sex">性别：	
+					<span class="circle hide"></span>			
+			        <label for="male"><input type="radio" name="sex" id="male" value="男"></label>男 
+			        <label for="female"> <input type="radio" name="sex" id="female" value="女"></label>女
+			        <div class="bubble-box arrow-top hide" style="top: 24px;left: 135px;"> 
+						<div class="wrap">至少选择一个</div> 
+					</div> 
+				</div>
+				<div class="bubble-box arrow-top hide"> 
+					<div class="wrap">姓名输入错误</div> 
+				</div> 
+			</div>			
+			
+			<div style="position: relative;">
+				手机
+				<input name="phone" type="text">
+				<div class="bubble-box arrow-top hide"> 
+					<div class="wrap">手机号码输入错误</div> 
+				</div> 
+			</div>
+			<div style="position: relative;">
+				Q Q
+				<input name="qq" type="text">
+				<div class="bubble-box arrow-top hide"> 
+					<div class="wrap">QQ号码输入错误</div> 
+				</div> 
+			</div>
+
+			<div style="position: relative;">
+				邮箱
+				<input name="email" type="text">
+				<div class="bubble-box arrow-top hide"> 
+					<div class="wrap">邮箱输入错误</div> 
+				</div> 
+			</div>
+			<div class="block">
+				<span class="category">文化程度</span>
+				<div class="container"  style="position: absolute;z-index: 4;">
+					<div class="select" style="margin-bottom: 0">
+						<div class="selectIcon iconfont">&#xe620;</div>
+						<div class="selection">--请选择--</div>
+						<div style="transform: translate(0);">
+							<div class="option">初中</div>
+							<div class="option">高中</div>
+							<div class="option">中技</div>
+							<div class="option">中专</div>
+							<div class="option">高技</div>
+							<div class="option">大专</div>
+							<div class="option">本科</div>
+							<div class="option">研究生</div>
+							<div class="option">博士</div>
+						</div>
+					</div>
+				</div>
+				<div class="bubble-box arrow-top hide" style="top: 28px"> 
+					<div class="wrap">至少选择一个</div> 
+				</div> 
+			</div>
+			<div class="block">
+				<span class="category">学习目的</span>
+				<div class="container"  style="position: absolute;z-index: 3">
+					<div class="select" style="margin-bottom: 0">
+						<div class="selectIcon iconfont">&#xe620;</div>
+						<div class="selection">--请选择--</div>
+						<div style="transform: translate(0);">
+							<div class="option">就业</div>
+							<div class="option">创业</div>
+							<div class="option">能力提升</div>
+							<div class="option">职业鉴定</div>
+						</div>
+					</div>
+				</div>
+				<div class="bubble-box arrow-top hide" style="top: 35px;left: 79px;z-index: 1"> 
+					<div class="wrap">至少选择一个</div> 
+				</div> 
+			</div>
+			<div id="learningChannel" class="block" >
+				您通过哪个渠道了解我们
+				<ul>
+					<li><input type="checkbox" value="老学员续读">老学员续读</li>
+					<li><input type="checkbox" value="朋友介绍">朋友介绍</li>
+					<li><input type="checkbox" value="简章">简章</li>
+					<li><input type="checkbox" value="公交广告">公交广告</li>
+					<li><input type="checkbox" value="电梯广告">电梯广告</li>
+					<li><input type="checkbox" value="报刊">报刊</li>
+				</ul>
+				
+				<ul>					
+					<li><input type="checkbox" value="学校网站">学校网站</li>
+					<li><input type="checkbox" value="其它网站">其它网站</li>
+					<li><input type="checkbox" value="学校员工介绍">学校员工介绍</li>
+					<li><input type="checkbox" value="手机短信">手机短信</li>
+					<li><input type="checkbox" value="其它">其它</li>
+				</ul>
+				<div class="bubble-box arrow-top hide" style="top: 105px;left: 314px;"> 
+					<div class="wrap">至少选择一个</div> 
+				</div> 	
+			</div>
+			<div id="course"  class="block">
+				<span class="categoty">报读课程：</span>
+				<ul>
+					<li><input type="checkbox" value="高级劳动关系协调师（一级）">高级劳动关系协调师（一级）</li>
+					<li><input type="checkbox" value="劳动关系协调师（二级）">劳动关系协调师（二级）</li>
+					<li><input type="checkbox" value="劳动关系协调员（三级）">劳动关系协调员（三级）</li>
+					<li><input type="checkbox" value="助理人力资源管理师（三级）">助理人力资源管理师（三级）</li>
+				</ul>
+				<ul>
+					<li><input type="checkbox" value="人力资源管理师(二级)">人力资源管理师(二级)</li>
+					<li><input type="checkbox" value="创业技能培训">创业技能培训</li>
+					<li><input type="checkbox" value="食品安全管理员">食品安全管理员</li>
+					<li><input type="checkbox" value="手机摄影培训">手机摄影培训</li>
+				</ul>
+				<div class="bubble-box arrow-top hide" style="top: 90px;"> 
+					<div class="wrap">至少选择一个</div> 
+				</div> 
+			</div>
+			<input type="button" value="立即报名" class="submit">
+		</form><!-- 
+	 --><form action="" class="competition hide">
+	 		<div class="statement">
+				<div class="title">参赛选手声明：</div>
+				<div class="item">1、本人自愿接受并遵守“高端服务·绚丽多彩·圆梦福田”福田区第四届职工技能竞赛的全部规则。</div>
+				<div class="item">2、本次比赛的作品知识产权归组委会所有，组委会享有赛事活动照片和比赛作品宣传发布的权利。</div>
+				<div class="item">3、如有任何剽窃、模仿行为，或作品失窃、受损及其他法律责任与主办单位无关。</div>
+				<div class="item">4、本次竞赛报名费及鉴定费一律全免。</div>				
+			</div>
+			<div style="position: relative;">
+				姓 　　名
+				<input name="name" type="text" autofocus>
+				<div class="bubble-box arrow-top hide"> 
+					<div class="wrap">姓名输入错误</div> 
+				</div> 
+				<div class="sex">性别：	
+					<span class="circle hide"></span>			
+			        <label for="male"><input type="radio" name="sex" id="male" value="男"></label>男 
+			        <label for="female"> <input type="radio" name="sex" id="female" value="女"></label>女
+			        <div class="bubble-box arrow-top hide" style="top: 26px;left: 76px;"> 
+						<div class="wrap">至少选择一个</div> 
+					</div> 
+				</div>
+			</div>
+			<div style="position: relative;">
+				身份证号
+				<input type="text" name="ID">
+				<div class="bubble-box arrow-top hide"> 
+					<div class="wrap">身份证输入错误</div> 
+				</div> 
+			</div>
+			<div class="block">
+				单 　　位
+				<input type="text" name="unit">
+				 <div class="bubble-box arrow-top hide"> 
+					<div class="wrap">至少选择一个</div> 
+				</div> 
+			</div>
+			<div class="block">
+				<span class="category">户口区域</span>
+				<div class="container"  style="position: absolute; z-index: 7">
+					<div class="select" style="margin-bottom: 0">
+						<div class="selectIcon iconfont">&#xe620;</div>
+						<div class="selection">--请选择--</div>
+						<div style="transform: translate(0);">
+							<div class="option">深圳市内</div>
+							<div class="option">广东省内深圳市外</div>
+							<div class="option">广东省外</div>
+							<div class="option">境外</div>
+						</div>
+					</div>
+				</div>
+				 <div class="bubble-box arrow-top hide" style="top: 21px;left: 210px;"> 
+					<div class="wrap">至少选择一个</div> 
+				</div> 
+			</div>
+			<div class="block">
+				<span class="category">文化程度</span>
+				<div class="container"  style="position: absolute;z-index: 6">
+					<div class="select" style="margin-bottom: 0">
+						<div class="selectIcon iconfont">&#xe620;</div>
+						<div class="selection">--请选择--</div>
+						<div style="transform: translate(0);">
+							<div class="option">初中</div>
+							<div class="option">高中</div>
+							<div class="option">中技</div>
+							<div class="option">中专</div>
+							<div class="option">高技</div>
+							<div class="option">大专</div>
+							<div class="option">本科</div>
+							<div class="option">研究生</div>
+							<div class="option">博士</div>
+						</div>
+					</div>
+				</div>
+				<div class="bubble-box arrow-top hide" style="top:30px"> 
+					<div class="wrap">至少选择一个</div> 
+				</div> 
+			</div>
+			<div style="position: relative;">
+				移动电话
+				<input type="text" name="mobilePhone">
+				<div class="bubble-box arrow-top hide"> 
+					<div class="wrap">移动电话输入错误</div> 
+				</div> 
+				固定电话
+				<input type="text" name="phone" placeholder="xxxx-xxxxxxx">
+				<div class="bubble-box arrow-top hide" style="left: 393px"> 
+					<div class="wrap">固定电话输入错误</div> 
+				</div> 
+			</div>
+			<div style="position: relative;">
+				报名工种
+				<input type="checkbox" value="家庭母婴护理员">家庭母婴护理员
+				<div class="bubble-box arrow-top hide" style="top: 19px;left: 90px;z-index: 8"> 
+					<div class="wrap">请选择</div> 
+				</div> 
+			</div>
+			<div class="block">
+				<span class="category">现有资格证书</span>
+				<div class="container"  style="position: absolute;z-index: 5">
+					<div class="select" style="margin-bottom: 0">
+						<div class="selectIcon iconfont">&#xe620;</div>
+						<div class="selection">--请选择--</div>
+						<div style="transform: translate(0);">
+							<div class="option">无等级</div>
+							<div class="option">初级</div>
+							<div class="option">中级</div>
+							<div class="option">高级</div>
+							<div class="option">技师</div>
+							<div class="option">高级技师</div>
+						</div>
+					</div>
+				</div>
+				<div class="bubble-box arrow-top hide" style="top: 29px;left: 210px;"> 
+					<div class="wrap">至少选择一个</div> 
+				</div>      
+			</div>
+			<div class="block">
+				<span class="category">本工种年龄</span>
+				<div class="container"  style="position: absolute;z-index: 4">
+					<div class="select" style="margin-bottom: 0">
+						<div class="selectIcon iconfont">&#xe620;</div>
+						<div class="selection">--请选择--</div>
+						<div style="transform: translate(0);">
+							<div class="option">0</div>
+							<div class="option">1</div>
+							<div class="option">2</div>
+							<div class="option">3</div>
+							<div class="option">4</div>
+							<div class="option">5</div>
+							<div class="option">6</div>
+							<div class="option">7</div>
+							<div class="option">8</div>
+							<div class="option">9</div>
+						</div>
+					</div>
+				</div>
+				<div class="bubble-box arrow-top hide" style="top: 30px;"> 
+					<div class="wrap">至少选择一个</div> 
+				</div> 
+			</div>
+			<input type="button" value="立即报名" class="submit">
+			<div class="matter">
+				<div class="title">注意事项：</div>
+				<div class="item">1、请学员认真填好相关信息后，如有填错而报名不成功，后果自负；</div>
+				<div class="item">2、本报名表为网络报名所用，只收集学员信息，学员需准备好身份证复印件一份、大一寸蓝底彩照一张及大一寸黑白证件照一张，报名截止至3月初，请将报名资料于3月前交予本培训中心工作人员</div>
+				<div class="item">3、带“*”为必填项。</div>
+			</div>
+		</form><!-- 
+	 --><div class="result hide">
+			<div class="content">
+				<div class="fail">
+					<i class="iconfont">&#xe60e;</i>
+					<span>报名失败，您已经报过名</span>
+				</div>
+				<div class="success">
+					<i class="iconfont">&#xe60f;</i>
+					<span>报名成功</span>
+				</div>				
+				<div class="countDown">页面将在<span class="time">5</span>秒后<span class="return">返回</a></div>
+			</div>
+		</div>
+	</section>
+	<div id="bg">
+			<div class="loggin">
+				<div class="title">登录</div>
+				<label class="inputWrap">	
+					<input type="text" class="input iconfont">
+					<div class="text iconfont">&#xe606; 账号</div>
+					<div class="alert"></div>
+				</label>
+				<label class="inputWrap">
+					<input type="password" class="input iconfont">
+					<div class="text iconfont">&#xe603; 密码</div>
+					<div class="alert"></div>
+				</label>
+				
+				<a href="loggin.html" class="link">注册</a>
+				<svg width="270" height="54" xmlns="http://www.w3.org/2000/svg">
+					<g id="button">
+						<rect x="1.5" y="2" width="268" height="50" ry="25" class="rect">
+							<!-- click -->
+							<animate id="click" attributeName="width" attributeType="XML" from="268" to="50" begin="indefinite" dur="0.3s" fill="freeze" restart="never"/>
+							<animate attributeName="x" attributeType="XML" from="1.5" to="110" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+							<animate attributeName="stroke" attributeType="XML" from="#19CC94" to="gray" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+							<animate attributeName="fill" attributeType="XML" from="white" to="white" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+							<!-- loadend -->
+							<animate id="ok" attributeName="width" attributeType="XML" from="50" to="99%" begin="load.end" dur="0.3s" fill="freeze"/>
+							<animate attributeName="x" attributeType="XML" from="110" to="1.5" begin="load.end" dur="0.3s" fill="freeze"/>
+							<animate attributeName="stroke" attributeType="XML" from="gray" to="#19CC94" begin="load.end" dur="0.01s" fill="freeze"/>
+							<animate attributeName="fill" attributeType="XML" from="white" to="#19CC94" begin="load.end" dur="0.01s" fill="freeze"/>
+						</rect>
+
+						<text x="45%" y="32" class="text">
+						登录
+							<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="click.begin" dur="0.01s" fill="freeze" restart="never"/>
+						</text>
+					</g>
+
+					<path d="M135,2,A25,25,0,1,1,134.9,2" id="circle">
+						<animate id="load" attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="click.end" dur="1s" fill="freeze"/>
+						<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="load.end" dur="0.01s" fill="freeze"/>
+					</path>
+
+					<polyline points="120 25, 135 40, 160 15" class="arrow">
+						<animate attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="ok.end" dur="0.5s" fill="freeze"/>
+					</polyline>
+				</svg>
+				<div class="closeButton iconfont">&#xe736;</div>
+			</div>
+		</div>
+	<div class="footer">
+		<div class="flexBox">
+			<div class="left">
+				<div class="code"></div>环宇培训中心创新办学理念，大力推行与企业及大专院校的人才培养及输出战略合作，采取社会招生、 定单培训、联合办学、政府企业委培、专题讲座等培训方式多层次全方位开展教学。
+			</div><!-- 
+			 --><div class="center">
+				<div class="logo"></div>
+				<div class="title">深圳市创新工匠投资咨询有限公司</div>
+			</div><!-- 
+			 --><div class="right">
+			 		<div class="title">友情链接</div>
+					<ul>						
+						<li><a href="">中网互联</a></li>
+						<li><a href="">百年教育网</a></li>
+						<li><a href="">幸福家庭网</a></li>
+						<li><a href="">教育大论文网</a></li>
+					</ul>
+					<ul>
+						<li><a href="">深圳市职业培训网</a></li>
+						<li><a href="">整合网络营销</a></li>
+						<li><a href="">华艺名教育网</a></li>
+						<li><a href="">天天电脑学习网</a></li>
+						
+					</ul>
+			</div>
+		</div>
+		<div class="message">
+			<div class="link">在线客服QQ：362628685 2540915119</div> / <div class="link">电话：0755-82780808</div> / <div class="link">邮箱：huanyuzypeixun@163.com</div>
+			<div class="description">粤ICO备09185067号</div>
+		</div>
+	</div>
+</body>
+</html>

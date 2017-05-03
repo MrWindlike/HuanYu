@@ -1,5 +1,6 @@
 
 aside{
+  z-index:10;
   width: 65px;
   border:1px solid #dfdfdf;
   position: absolute;
@@ -7,11 +8,9 @@ aside{
   right:0px;
   background: #fff;
 }
-.iconfont{
-  font-family: iconfont;
-  font-style: normal;
-}
+
 .consult{
+  display: block;
   position:relative;
   width: 70%;
   height: 80px;
@@ -42,9 +41,7 @@ aside{
 .consult_WeChat:hover .code{
   display: inline-block;
 }
-.iconfont:hover{
-  color:#090A3A;
-}
+
 .Totop{
   border-bottom: none;
 }
