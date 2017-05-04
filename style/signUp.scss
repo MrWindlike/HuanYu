@@ -137,6 +137,8 @@
 		display: inline-block;
 		margin-left: 30px;
 		position: relative;
+		width: 180px;
+		font-size: 14px;
 		#male,#female{
 			opacity: 0;
 		}
@@ -147,8 +149,8 @@
 		    background: #34a602;
 		    border-radius: 50%;
 		    position: absolute;
-		    top: 8.5px;
-		    left: 71.5px;
+		    top: 7.5px;
+		    left: 68.2px;
 		    transition: all .4s cubic-bezier(1, -0.19, 0, 0.79);
 		    /* 132.1 */
 		}

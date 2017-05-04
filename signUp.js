@@ -33,16 +33,16 @@ $(function(){
 		$(".sex .circle").removeClass("hide");
 		switch(index){
 			case 0:
-					$(".sex .circle").css("left","70.5px");
+					$(".sex .circle").css("left","68.2px");
 					break;
 			case 1:
-					$(".sex .circle").css("left","127.3px");
+					$(".sex .circle").css("left","124.1px");
 					break;
 			case 2:
-					$(".sex .circle").css("left","70.5px");
+					$(".sex .circle").css("left","68.2px");
 					break
-			case 3:
-					$(".sex .circle").css("left","127.3px");
+			case 3:4.1
+					$(".sex .circle").css("left","124.1px");
 					break;
 		}
 	});
