@@ -40,7 +40,7 @@
 
 	$(".loggin").login();
 	/*****************************/
-	$('.item').mouseover(function() {
+	$('.navs .item').mouseover(function() {
 		var _this=$(this);
 		$(this).find('ul').css({"display":"block"});
 		$('.bg').stop().animate({'left':_this.index() * 110 + 'px'},100);
