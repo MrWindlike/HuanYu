@@ -61,7 +61,10 @@ header.top .word a{
   width:1200px;
   margin:0 auto;
 }
-
+.main_wrap .loadding{
+  text-align:center;
+  margin:20px 0;
+}
 .main_wrap .main{
   width: 80%;
   float: left;
@@ -89,9 +92,13 @@ header.top .word a{
   width:100%;
   height:100%;
 }
-.main_wrap .main .artical h3{
+.main_wrap .main .artical h2{
   text-align: center;
-  margin:10px 0px;
+  margin:15px 0px;
+}
+.main_wrap .main .artical h4{
+  text-align: center;
+  margin:15px 0px;
 }
 .main_wrap .main .artical .left{
   float: left;

@@ -10,7 +10,7 @@ module.exports = {
     loggin : './loggin.js',
     view : './view.js',
     artical :'./artical.js',
-    introduce :'./introduce.js'
+    introduce :'./introduce.js',
     signUp:'./signUp.js',
   },
   output: { 
