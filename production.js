@@ -12,6 +12,7 @@ module.exports = {
     artical :'./artical.js',
     introduce :'./introduce.js',
     signUp:'./signUp.js',
+    school: './school.js'
   },
   output: { 
     path: path.join(__dirname, 'dist'), //输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
@@ -52,8 +53,8 @@ module.exports = {
       new ExtractTextPlugin('css/[name].css'),
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendors', // 将公共模块提取，生成名为`vendors`的chunk
-        chunks: ['index','loggin', 'artical', 'view','introduce','signUp'], //提取哪些模块共有的部分
-        minChunks: 6 // 提取至少3个模块共有的部分
+        chunks: ['index','loggin', 'artical', 'view','introduce','signUp', 'school'], //提取哪些模块共有的部分
+        minChunks: 7 // 提取至少3个模块共有的部分
       }),
       new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
         //favicon: './src/img/favicon.ico', //favicon路径，通过webpack引入同时可以生成hash值

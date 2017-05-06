@@ -58,7 +58,7 @@
 '						<ul>',
 '							<li><a href="/introduce.html">关于环宇</a></li>',
 '							<li><a href="/artical.html">学校资讯</a></li>',
-'							<li><a href="">学校风采</a></li>',
+'							<li><a href="school.html">学校风采</a></li>',
 //'							<li><a href="javascript:;">考试指南</a></li>',
 '						</ul>',
 '					</li>',
