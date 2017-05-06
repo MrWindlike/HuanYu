@@ -4,7 +4,6 @@ require('./style/carousel.scss')
 require('./style/aside.scss')
 
 require('./js/js.js')
-require('./js/Wind.js')
 require('./js/carousel.js')
 
 
