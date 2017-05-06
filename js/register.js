@@ -132,9 +132,15 @@
 					}
 					else{
 						_this.element.find('[data-type!="password"]').trigger('blur');
+						$(inputs).trigger('blur');
 						$password.trigger('blur');
 					}
 				}
+				_this.element.find('[data-type]').toArray().forEach(function(value){
+					if($(value).hasClass('input-danger'))
+						flag = false;
+				});
+
 				if(!flag)
 					return ;
 				$.ajax({

@@ -7,9 +7,72 @@
 
 	window.Cookies = require('./cookies.js')
 	window.$ = window.jQuery = require('./jQuery.js');
+	require('./Wind.min.js')
+
+	window.nav = {
+		template : ['<div id="navs">',
+'				',
+'				<span class="text iconfont" style="float:right">&#xe60b; 咨询电话:0755-82780808</span>',
+'				<ul class="navs">',
+'					<li class="item"><a href="index.html" class="naver">首页</a>',
+'					</li>',
+/*'					<li class="item"><a href="javascript:;" class="naver">创业服务</a>',
+'						<ul>',
+'							<li><a href="javascript:;">创业政策</a></li>',
+'							<li><a href="javascript:;">创业项目</a></li>',
+'							<li><a href="javascript:;">就业服务</a></li>',
+'							<li><a href="javascript:;">招生信息</a></li>',
+'							<li><a href="javascript:;">职业指导</a></li>',
+'						</ul>',
+'					</li>',*/
+'					<li class="item"><a href="javascript:;" class="naver">培训项目</a>',
+'						<ul>',
+'							<li><a href="javascript:;">企业内训</a></li>',
+//'							<li><a href="javascript:;">再就业培训</a></li>',
+'							<li><a href="javascript:;">职业技能培训</a></li>',
+'						</ul>',
+'					</li>',
+'					<li class="item"><a href="/signUp.html" class="naver">在线报名</a>',
+'						<ul>',
+'							<li><a href="/signUp.html">培训报名</a></li>',
+'							<li><a href="/signUp.html?show=competition">竞赛报名</a></li>',
+'						</ul>',
+'					</li>',
+'					<li class="item"><a href="javascript:;" class="naver">在线学习</a>',
+'						<ul>',
+'							<li><a href="javascript:;">相关资料</a></li>',
+'							<li><a href="javascript:;">在线视频</a></li>',
+'							<li><a href="javascript:;">在线测试</a></li>',
+'						</ul>',
+'					</li>',
+'					<li class="item"><a href="javascript:;" class="naver">下载专区</a>',
+'						<ul>',
+'							<li><a href="javascript:;">竞赛说明</a></li>',
+'							<li><a href="javascript:;">竞赛报名表</a></li>',
+'							<li><a href="javascript:;">工作证明模板</a></li>',
+'							<li><a href="javascript:;">更多下载</a></li>',
+'						</ul>',
+'					</li>',
+'					</li>',
+'					<li class="item"><a href="/introduce.html" class="naver">了解环宇</a>',
+'						<ul>',
+'							<li><a href="/introduce.html">关于环宇</a></li>',
+'							<li><a href="/artical.html">学校资讯</a></li>',
+'							<li><a href="">学校风采</a></li>',
+//'							<li><a href="javascript:;">考试指南</a></li>',
+'						</ul>',
+'					</li>',
+'					<div class="bg"></div>',
+'				</ul>',
+'			</div>'].join("")
+	};
+	$('#nav').Use(nav);
+	var index = parseInt($('#nav').attr('data-index'));
+	$($('#nav').find('.bg')[0]).css('left', index * 110 + 'px');
+	$($('#nav').find('.naver')[index]).css('color', '#3882b0');
 
 	$('#nav').stop().mouseleave(function() {
-		$('.bg').stop().animate({'left':0},1000);
+		$('.bg').stop().animate({'left':index*110},1000);
 		$('.item ul').css({"display":"none"});
 	});
 
