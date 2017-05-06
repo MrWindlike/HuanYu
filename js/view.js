@@ -27,6 +27,7 @@
 
     ShowArticle.prototype = {
         init: function () {
+
             this.getArticle();
         },
         getMonth: function (month) {       //把日期转为英文显示
@@ -77,6 +78,7 @@
                                 temp = temp.replace("{{content}}", content);
                         }
                     }
+                    $(".loadding").hide();
                     $(".artical").append(temp);
                 }
             });

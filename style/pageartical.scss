@@ -144,8 +144,19 @@ header.top.top .word{
 }
 .main_wrap .main .more{
     color: #E67219;
+  position:relative;
 }
-
+.main_wrap .main .more .loadding{
+  width: 30px;
+  height: 30px;
+ position:absolute;
+  right:415px;
+  top:10px;
+}
+.main_wrap .main .more .loadding img{
+  width:100%;
+  height:100%;
+}
 .main_wrap .right{
   float: right;
   width: 200px;
