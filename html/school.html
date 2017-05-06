@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>artical</title>
+    <title>活动掠影</title>
 </head>
 <body>
 <div id="header">
@@ -20,35 +20,80 @@
         </div>
     </div>
 </div>
-<div id="nav" data-index='6'></div>
-<header class="top">
-    <div class="top">
-        <span class="iconfont">&#xe600;</span>
-        <span class="word">企业动态</span>
-        <span class="iconfont">&#xe60a;</span>
-        <span class="iconfont">&#xe617;</span>
-        <span class="word">学校资讯</span>
-    </div>
-</header>
+<div id="nav">
+    <div id="navs">
 
-<div id="container" class="clearfix main_wrap">
-    <div class="main">
-        <div class="content_wrap">
-            <div class="artical clearfix">
-            </div>
-        </div>
-        <div class="more">
-            <span>加载更多</span>
-            <div class="loadding">
-                <img src="dist/assets/img/loadding.gif" alt="加载中">
-            </div>
-        </div>
+        <span class="text iconfont" style="float:right">&#xe60b; 咨询电话:0755-82780808</span>
+        <ul class="navs">
+            <li class="item"><a href="index.html" class="naver" style="color: #3882b0">首页</a>
+            </li>
+            <li class="item"><a href="javascript:;" class="naver">创业服务</a>
+                <ul>
+                    <li><a href="javascript:;">创业政策</a></li>
+                    <li><a href="javascript:;">创业项目</a></li>
+                    <li><a href="javascript:;">就业服务</a></li>
+                    <li><a href="javascript:;">招生信息</a></li>
+                    <li><a href="javascript:;">职业指导</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="javascript:;" class="naver">培训项目</a>
+                <ul>
+                    <li><a href="javascript:;">企业内训</a></li>
+                    <li><a href="javascript:;">再就业培训</a></li>
+                    <li><a href="javascript:;">职业技能培训</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="/signUp.html" class="naver">在线报名</a>
+                <ul>
+                    <li><a href="/signUp.html">培训报名</a></li>
+                    <li><a href="/signUp.html?show=competition">竞赛报名</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="javascript:;" class="naver">在线学习</a>
+                <ul>
+                    <li><a href="javascript:;">相关资料</a></li>
+                    <li><a href="javascript:;">在线视频</a></li>
+                    <li><a href="javascript:;">在线测试</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="javascript:;" class="naver">下载专区</a>
+                <ul>
+                    <li><a href="javascript:;">竞赛说明</a></li>
+                    <li><a href="javascript:;">竞赛报名表</a></li>
+                    <li><a href="javascript:;">工作证明模板</a></li>
+                    <li><a href="javascript:;">更多下载</a></li>
+                </ul>
+            </li>
+            </li>
+            <li class="item"><a href="/introduce.html" class="naver">了解环宇</a>
+                <ul>
+                    <li><a href="/introduce.html">关于环宇</a></li>
+                    <li><a href="/artical.html">学校资讯</a></li>
+                    <li><a href="school.html">学校风采</a></li>
+                    <li><a href="javascript:;">考试指南</a></li>
+                </ul>
+            </li>
+            <div class="bg"></div>
+        </ul>
     </div>
+</div>
+<div class="word clearfix">
+    <span>活动掠影</span>
+</div>
+<!--图集部分-->
+<div class="container clearfix">
 
-    <div class="right clearfix">
-        <img src="dist/assets/img/one.jpg" alt="正在加载">
-        <img src="dist/assets/img/two.jpg" alt="正在加载">
-    </div>
+</div>
+<!--遮罩-->
+<div class="wrap"></div>
+<!--进入图集-->
+<div class="showLists">
+    <ul class="lists">
+    </ul>
+    <ul class="dots">
+    </ul>
+    <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+    <a href="javascript:;" id="next" class="arrow">&gt;</a>
 </div>
 <div id="bg">
     <div class="loggin">
@@ -69,10 +114,10 @@
             <g id="button">
                 <rect x="1.5" y="2" width="268" height="50" ry="25" class="rect">
                     <!-- click -->
-                    <animate id="click" attributeName="width" attributeType="XML" from="268" to="50" begin="indefinite"
+                    <animate id="click" attributeName="width" attributeType="XML" from="268" to="50"
+                             begin="indefinite" dur="0.3s" fill="freeze" restart="never"/>
+                    <animate attributeName="x" attributeType="XML" from="1.5" to="110" begin="click.begin"
                              dur="0.3s" fill="freeze" restart="never"/>
-                    <animate attributeName="x" attributeType="XML" from="1.5" to="110" begin="click.begin" dur="0.3s"
-                             fill="freeze" restart="never"/>
                     <animate attributeName="stroke" attributeType="XML" from="#19CC94" to="gray" begin="click.begin"
                              dur="0.3s" fill="freeze" restart="never"/>
                     <animate attributeName="fill" attributeType="XML" from="white" to="white" begin="click.begin"
@@ -98,8 +143,8 @@
             <path d="M135,2,A25,25,0,1,1,134.9,2" id="circle">
                 <animate id="load" attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0"
                          begin="click.end" dur="1s" fill="freeze"/>
-                <animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="load.end" dur="0.01s"
-                         fill="freeze"/>
+                <animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="load.end"
+                         dur="0.01s" fill="freeze"/>
             </path>
 
             <polyline points="120 25, 135 40, 160 15" class="arrow">
@@ -116,12 +161,12 @@
             <div class="code"></div>
             环宇培训中心创新办学理念，大力推行与企业及大专院校的人才培养及输出战略合作，采取社会招生、 定单培训、联合办学、政府企业委培、专题讲座等培训方式多层次全方位开展教学。
         </div><!--
-             -->
+			 -->
         <div class="center">
             <div class="logo"></div>
             <div class="title">深圳市创新工匠投资咨询有限公司</div>
         </div><!--
-             -->
+			 -->
         <div class="right">
             <div class="title">友情链接</div>
             <ul>

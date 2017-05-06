@@ -3,7 +3,7 @@ require("./js/school.js");
 require('./style/school.scss');
 
 
-$("container").picture({
+new picture({
     "container":$(".container"),
     "showList":$(".showLists"),
     "wrap":$(".wrap"),

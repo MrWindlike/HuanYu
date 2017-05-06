@@ -37,7 +37,33 @@ GetTitle({type:"近期活动"},function(data){
 
 var lists = $(".lists");
 
+alert($(".safeManager"))
+$(".hotCourses").find(".safeManager").on("click",function(){
+    console.log(123)
+    window.open('localhost:8080/view.html?id=590c857fd4fb85413cbddd8d');
+})
+$(".hotCourses").find(".resourceManager").on("click",function(){
+    window.open('localhost:8080/view.html?id=590c810176f56245482f77b5');
+})
+$(".hotCourses").find(".laborRalation").on("click",function(){
+     window.open('localhost:8080/view.html?id=590c810176f56245482f77b5');
+})
+$(".hotCourses").find(".NutritionRecipe").on("click",function(){
+ window.open('localhost:8080/view.html?id=590c836ed4fb85413cbddd8b');
+})
+$(".hotCourses").find(".publicNutritionist").on("click",function(){
+ window.open('localhost:8080/view.html?id=590c836ed4fb85413cbddd8b');
+})
 
+$(".hotCourses").find(".skillTraining").on("click",function(){
+ window.open('localhost:8080/view.html?id=590c82c9d4fb85413cbddd8a');
+})
+$(".hotCourses").find(".eCommerce").on("click",function(){
+ window.open('localhost:8080/view.html?id=590c8416d4fb85413cbddd8c');
+})
+$(".hotCourses").find(".hairdresser").on("click",function(){
+ window.open('localhost:8080/view.html?id=590c810176f56245482f77b5');
+})
 function GetTitle(data,callback){
     $.ajax({
         url : "http://www.guozewei.cn/title",
@@ -57,3 +83,4 @@ function GetTitle(data,callback){
         }
     });
 }
+

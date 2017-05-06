@@ -53,15 +53,17 @@
             return data + newtime + minute;
         },
         getData: function () {              //获取数据
+            alert(1)
             var _this = this;
             $.ajax({
                 type: "POST",
-                url: "http://www.guozewei.cn/article",
+                url: "http://www.guozewei.cn/allArticle",
                 data: {
                     page: _this.page,
-                    limit: _this.limit
+                    limit: _this.limit,
                 },
                 success: function (message) {           //成功回调函数
+                    console.log(message);
                     var data = message.data;
                     _this.totalCount = message.totalCount;
                     _this.page++;
