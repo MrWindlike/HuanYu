@@ -1,0 +1,11 @@
+@mixin sticky-footer{
+	@at-root &{
+		display: flex;
+		flex-flow: column;
+		min-height: 100vh;
+	}
+	
+	@at-root main{
+		flex:1;
+	}
+}

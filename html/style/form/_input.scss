@@ -1,0 +1,24 @@
+@mixin input{
+    width: 100%;
+    margin:1em 0;
+	position: relative;
+	display: block;
+    height: 34px;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    color: #555;
+    font-size: 1em;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+    &:focus{
+    	z-index: 2;
+    	border-color: #66afe9;
+    	outline: 0;
+    	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    }
+}

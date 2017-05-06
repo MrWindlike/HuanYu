@@ -1,0 +1,13 @@
+@mixin angle-box($angle:bottom-right,$color:#58D4FF,$textColor:white,$type:none) {
+	padding:.5em;
+	color: $textColor;
+	display: inline-block;
+	border-radius:1em;
+	border-#{$angle}-radius: 0;
+	@if $type == danger {$color:#c00;}
+	@else if $type == success {$color:#5cb85c;}
+	@else if $type == info {$color:#5bc0de;}
+	@else if $type == warning {$color:#f0ad4e;}
+	@else if $type == primary {$color:#337ab7;}
+	background: $color;
+}

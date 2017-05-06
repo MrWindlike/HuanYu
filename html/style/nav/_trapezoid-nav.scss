@@ -1,0 +1,26 @@
+@mixin trapezoid-nav($background:#ccc, $color : black, $text-decoration: none) { 
+	position: relative; 
+	display: inline-block; 
+	padding: .3em 1em 0; 
+	word-break: keep-all;
+	color: $color;
+	text-decoration: $text-decoration;
+	color: $color;
+	transform: translate(0); 
+
+	&:before { 
+		content: ''; 
+		z-index:-2;
+		position: absolute; 
+		top: 0; right: 0; bottom: 0; left: 0; 
+		background: $background; 
+		background-image: 
+		linear-gradient( rgba(lighten($background,100),.6), rgba($background,0)); 
+		border: 1px solid rgba(0,0,0,.4); 
+		border-bottom: none; 
+		border-radius: .5em .5em 0 0; 
+		box-shadow: 0 .15em white inset; 
+		transform: perspective(.5em) rotateX(5deg); 
+		transform-origin: bottom; 
+	}
+}

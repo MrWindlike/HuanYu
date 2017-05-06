@@ -1,0 +1,235 @@
+@import "~./Windlike";
+
+
+.footer{
+	a{
+	  color:white;
+	}
+	min-width:1200px;
+	background:#333;
+	width:100%;
+	text-align:center;
+
+	.flexBox{
+		position:relative;
+		width: 1200px;
+		margin:2em auto;
+		color:rgb(240,240,240);
+		font-size: 1em;
+		text-align:center;
+
+		.left{
+			float:left;
+			vertical-align: top;
+			padding:3em 0;
+			font-style: italic;
+			text-align: left;
+			display: inline-block;
+			line-height: 1.5em;
+			
+			a{
+				text-decoration: underline;
+			}
+
+			.code{
+				width: 100px;
+				height: 100px;
+				background:url(../dist/assets/img/huanyu.jpg);
+				background-size:100% 100%;
+			}
+		}
+		.center{
+			vertical-align: top;
+			display: inline-block;
+
+			.logo{
+				margin:0 auto;
+				height: 0;
+				width: 50%;
+				padding-bottom: 50%;
+				margin-bottom: 1em;
+				background:url(../dist/assets/img/logo.png);
+				background-size:100% 100%;
+			}
+
+			.title{
+				font-size: 1.3em;
+				font-family: BrushScriptStd;
+			}
+
+			.content{
+				font-size: 1.3em;
+				font-family: BrushScriptStd;
+			}
+		}
+		.right{
+			float:right;
+			vertical-align: top;
+			display: inline-block;
+			padding:3em 0;
+			.title{
+				text-align: left;
+				font-size: 1.2em;
+				margin-bottom: .5em;
+			}
+
+			ul{
+				float: left;
+				display: inline-block;
+
+				&:nth-of-type(2){
+					margin-left:10px;
+				}
+				
+			
+				li{
+					margin-top: 5px;
+    				text-align: left;
+    				font-size:.9em;
+				}
+			}
+		}
+	}
+
+	.message{
+		color:#999;
+		padding:2em 0;
+		background:#292929;
+
+		.link{
+			font-size: 1em;
+			display: inline-block;
+			color: lighten(#999, 20);
+
+			&:hover{
+				color: white;
+			}
+		}
+
+		.description{
+			margin-top: .5em;		
+		}
+	}
+
+	@media all and (min-width:1201px){
+		
+
+		.left{
+			margin-right: 10em;
+			margin-top: 2em;
+			width: calc(33% - 10em);
+			.code{
+				float:left;
+				margin-right: 1em;
+				margin-bottom: .2em;
+			}
+		}
+		
+		.center{
+			margin-top: 2em;
+			width: calc(33% - 6em);
+			padding:3em;
+			padding-bottom:10em;
+			border-right: 1px rgb(240,240,240) solid;
+			border-left: 1px rgb(240,240,240) solid;
+		}
+
+		.right{
+			margin-top: 2em;
+			margin-left: 10em;
+			width: calc(33% - 10em);
+			.relative{
+				text-align: left;
+				display: block;
+
+				.relativeLogo{
+					display: inline-block;
+				}
+
+				.name{
+					margin-top: calc(7.5% - 0.5em);
+					margin-left: 1em;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	@media all and (max-width:1500px) and (min-width:769px){
+		.flexBox{
+			display: flex;
+		}
+
+		.left{
+			width: 28%;
+			margin-right: 5%;
+
+			.code{
+				float:left;
+				margin-right: 1em;
+			}
+		}
+		
+		.center{
+			width: 28%;
+			margin-top: 2em;
+			padding:5%;
+			border-right: 1px rgb(240,240,240) solid;
+			border-left: 1px rgb(240,240,240) solid;
+		}
+
+		.right{
+			width: 28%;
+			margin-left: 5%;
+
+			.relative{
+				text-align: left;
+				display: block;
+
+				.relativeLogo{
+					display: inline-block;
+				}
+
+				.name{
+					margin-top: calc(7.5% - 0.5em);
+					margin-left: 1em;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	@media all and (max-width:768px){
+		.left,.center,.right{
+			margin:0 auto;
+			max-width: 75%;
+			
+		}
+
+		.left{
+			@include gradient-line($color:white, $bottom:1.5em);
+		}
+
+		.center{
+			@include gradient-line($color:white, $bottom:-1.5em);
+		}
+
+		.code{
+			margin: 0 auto;
+			margin-bottom: 1em;
+		}
+		.right{
+			display: flex;
+		}
+		.relative{
+			text-align: center;
+			position:relative;
+			margin:0 auto;
+			display: inline-block;
+
+			.relativeLogo{
+				margin:0 auto;
+			}
+		}
+	}
+}

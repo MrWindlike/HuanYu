@@ -1,0 +1,47 @@
+
+aside{
+  z-index:10;
+  width: 65px;
+  border:1px solid #dfdfdf;
+  position: absolute;
+  bottom:100px;
+  right:0px;
+  background: #fff;
+}
+
+.consult{
+  display: block;
+  position:relative;
+  width: 70%;
+  height: 80px;
+  border-bottom: 1px solid #dfdfdf;
+  margin:0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+.consult .code{
+  position:absolute;
+  top:-81px;
+  right:54px;
+  display: inline-block;
+  width:175px;
+  height:175px;
+  display: none;
+  background: #fff;
+}
+.consult .code img{
+  width:100%;
+  height:100%;
+}
+.asideicon{
+  font-size:45px;
+  line-height:80px;
+  color:#8d8d8d;
+}
+.consult_WeChat:hover .code{
+  display: inline-block;
+}
+
+.Totop{
+  border-bottom: none;
+}
