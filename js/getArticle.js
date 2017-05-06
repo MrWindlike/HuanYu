@@ -86,6 +86,8 @@
                         }
                         $(".content_wrap").append(temp);
                         _this.isClick = true;
+                        $(".more").find("span").html("加载更多");
+                        $(".more").find(".loadding").hide();
                     }
                     if (_this.page >= _this.totalCount) {
                         $(".more").find("span").html("没有更多了").end().css("cursor", "not-allowed");
@@ -105,6 +107,8 @@
             $(".more").on("click", function () {
                 if (_this.isClick) {
                     _this.getMore();
+                    $(this).find("span").html("加载中");
+                    $("this").find(".loadding").show();
                     _this.isClick = false;
                 }
                 else
