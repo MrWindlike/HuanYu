@@ -1,28 +1,25 @@
 (function ($) {
 
-    var TEMPLATE = `
-    <div class="artical clearfix">
-            <div class="left">
-                <span class="date">{{day}}</span><br>
-                <span class="month">{{month}}</span><br>
-                <span class="year">{{year}}</span>
-            </div>
-
-            <div class="middle">
-                <div class="title">
-                    <a target="_blank" href="http://localhost:63342/artical/view.html?id={{_id}}">{{title}}</a>
-                </div>
-                <div class="detail">
-                    <span>发布者:{{publisher}}</span>
-                    <span>发布时间：{{time}}</span>
-                </div>
-                <div class="content">
-                    <p> {{content}}
-                        <a target="_blank" href="http://localhost:63342/artical/view.html?id={{_id}}">[显示详情]</a></p>
-                </div>
-            </div>
-        </div>
-`;
+    var TEMPLATE = ['<div class="artical clearfix">',
+'            <div class="left">',
+'                <span class="date">{{day}}</span><br>',
+'                <span class="month">{{month}}</span><br>',
+'                <span class="year">{{year}}</span>',
+'            </div>',
+'            <div class="middle">',
+'                <div class="title">',
+'                    <a target="_blank" href="http://localhost:63342/artical/view.html?id={{_id}}">{{title}}</a>',
+'                </div>',
+'                <div class="detail">',
+'                    <span>发布者:{{publisher}}</span>',
+'                    <span>发布时间：{{time}}</span>',
+'                </div>',
+'                <div class="content">',
+'                    <p> {{content}}',
+'                        <a target="_blank" href="http://localhost:63342/artical/view.html?id={{_id}}">[显示详情]</a></p>',
+'                </div>',
+'            </div>',
+'        </div>'].join("");
     var monthArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
     function GetArticle() {

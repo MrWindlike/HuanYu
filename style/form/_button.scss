@@ -7,7 +7,7 @@
 	@else if $type == info {$color:#5bc0de;}
 	@else if $type == warning {$color:#f0ad4e;}
 	@else if $type == primary {$color:#337ab7;}
-
+	background:$color;
 	background:$color linear-gradient(hsla(0,0%,100%,.2), transparent);
 	border-radius:.2em;
 	box-shadow:0 .05em .25em gray;

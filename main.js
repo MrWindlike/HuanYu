@@ -18,7 +18,7 @@ $(window).on("scroll",function(){
 
 $(".carousel").carousel({num:5,path:"./dist/assets/img/"});
 
-var TEMPLATE = `<li><a href="/view.html?id={{_id}}"><i class="iconfont icon">&#xe60a;</i><span>{{title}}</span></a></li>`;
+var TEMPLATE = '<li><a href="/view.html?id={{_id}}"><i class="iconfont icon">&#xe60a;</i><span>{{title}}</span></a></li>';
 
 GetTitle({type:"最新消息"},function(data){
 	var lists = $(".news");

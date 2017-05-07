@@ -1,4 +1,6 @@
-(function(){
+(function(){ 
+	
+
 	require('../style/normalize.css')
 	require('../style/style.scss')
 	require('../style/nav.scss')
@@ -9,6 +11,23 @@
 	window.$ = window.jQuery = require('./jQuery.js');
 	require('./Wind.min.js')
 
+	
+
+	var header = {
+		template : ['<div class="headerWrap">',
+'        <div class="logo">',
+'            <img src="./dist/assets/img/logo.png" style="margin-right:1em;" width="60px"><span class="name">深圳市创新工匠投资咨询有限公司</span>',
+'        </div>',
+'        <div class="logButton" href="loggin.html">登录/注册</div>',
+'        <div class="user">',
+'            <div class="username iconfont">Windlike &#xe620;</div>',
+'            <div class="menus">',
+'                <div class="menu iconfont">&#xe60e; 注销</div>',
+'            </div>',
+'        </div>',
+'    </div>'].join("")
+	};
+	$('#header').Use(header);
 	window.nav = {
 		template : ['<div id="navs">',
 '				',

@@ -113,7 +113,6 @@ ul{
 	float: left;
 	width: 110px;
 	height: 60px;
-	padding:0 15px;
 	line-height: 60px;
 }
 
@@ -127,6 +126,11 @@ ul{
 .naver{
 	font-weight: bold;
 	color:black;
+	display: inline-block;
+	height: 60px;
+	line-height:60px;
+	width:110px;
+	text-align:center;
 }
 .item{
 	position:relative;
@@ -137,6 +141,8 @@ ul{
 }
 .item ul{
 	position: absolute;
+	top:60px;
+	left:1em;
 	display: none;
 	opacity: 0;
 }
@@ -145,7 +151,6 @@ ul{
 	font-size: 15px;
 	line-height: 25px;
 	text-align: center;
-	padding:.5em 0;
 	border:darken(#31c27c, 5) 1px solid;
 	cursor:pointer;
 	&:hover{
@@ -157,6 +162,10 @@ ul{
 	}
 
 	a{
+		display: inline-block;
+		width: 110px;
+		height: 41px;
+		line-height: 41px;
 		color:black;
 	}
 }
