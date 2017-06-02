@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>活动掠影</title>
+    <script type="text/javascript">
+        if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE6.0") 
+        { 
+            alert("IE 6.0");
+        } 
+        else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE7.0") 
+        { 
+            alert("IE 7.0");
+        } 
+        else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE8.0") 
+        { 
+            alert("IE 8.0");
+            location.assign('./error.html');
+        }
+    </script>
 </head>
 <body>
 <div id="header"></div>
@@ -15,9 +30,17 @@
 
 </div>
 <!--遮罩-->
+<div class="loadding_wrap">
+    <div class="loadding">
+        <img src="dist/assets/img/loadding.gif" alt="加载中">
+    </div>
+</div>
 <div class="wrap"></div>
 <!--进入图集-->
 <div class="showLists">
+    <div class="picloadding">
+            <img src="dist/assets/img/loadding.gif" alt="加载中">
+    </div>
     <ul class="lists">
     </ul>
     <ul class="dots">
@@ -85,43 +108,6 @@
         <div class="closeButton iconfont">&#xe736;</div>
     </div>
 </div>
-<div class="footer">
-    <div class="flexBox">
-        <div class="left">
-            <div class="code"></div>
-            环宇培训中心创新办学理念，大力推行与企业及大专院校的人才培养及输出战略合作，采取社会招生、 定单培训、联合办学、政府企业委培、专题讲座等培训方式多层次全方位开展教学。
-        </div><!--
-			 -->
-        <div class="center">
-            <div class="logo"></div>
-            <div class="title">深圳市创新工匠投资咨询有限公司</div>
-        </div><!--
-			 -->
-        <div class="right">
-            <div class="title">友情链接</div>
-            <ul>
-                <li><a href="">中网互联</a></li>
-                <li><a href="">百年教育网</a></li>
-                <li><a href="">幸福家庭网</a></li>
-                <li><a href="">教育大论文网</a></li>
-            </ul>
-            <ul>
-                <li><a href="">深圳市职业培训网</a></li>
-                <li><a href="">整合网络营销</a></li>
-                <li><a href="">华艺名教育网</a></li>
-                <li><a href="">天天电脑学习网</a></li>
-
-            </ul>
-        </div>
-    </div>
-    <div class="message">
-        <div class="link">在线客服QQ：362628685 2540915119</div>
-        /
-        <div class="link">电话：0755-82780808</div>
-        /
-        <div class="link">邮箱：huanyuzypeixun@163.com</div>
-        <div class="description">粤ICO备09185067号</div>
-    </div>
-</div>
+<div class="footer"></div>
 </body>
 </html>

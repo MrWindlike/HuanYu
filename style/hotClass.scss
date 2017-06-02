@@ -15,7 +15,7 @@ ul,li{
 	display: inline-block;
     width: 250px;
     margin:.5em 0;
-    padding: 1em;
+    padding:1em;
     border-radius: 8px;
     box-shadow: 1.8px 1px 1px grey;
 	color:#eee;
@@ -40,6 +40,7 @@ ul,li{
     &:nth-of-type(3),&:nth-of-type(7){
     	margin:.5em 66px 0 33px;
     }
+
 }
 .hotCourses .top li:nth-child(1){
 	background: #3399fe;

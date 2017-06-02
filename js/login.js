@@ -42,7 +42,7 @@
 					return ;
 
 				$.ajax({
-					url : "http://www.guozewei.cn/login",
+					url : URL+"/login",
 					type: "POST",
 					dataType : "JSON",
 					data:{

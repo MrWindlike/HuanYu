@@ -6,6 +6,7 @@ require('./style/school.scss');
 $("container").picture({
     "container":$(".container"),
     "showList":$(".showLists"),
+    "loadding":$(".loadding_wrap"),
     "wrap":$(".wrap"),
     "prev":$("#prev"),
     "next":$("#next"),

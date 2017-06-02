@@ -36,7 +36,7 @@
 			this.getUrlParameter();
 			this.eventBindingOfClick();
 			this.inputBlur();
-			this.element.find(".select").selection({showNum: 9});
+			/*this.element.find(".select").selection({showNum: 9});*/
 		},
 		inputBlur:function(){
 			var _this = this;
@@ -97,15 +97,16 @@
 			var Element = _this.element;
 			_default.name = Element.find("input[name='name']")[index].value;
 			var sex = Element.find("input:radio:checked");
-			_default.sex = sex.length===0 ? "" : sex.val();
+			var circle = Element.find(".circle").hasClass("hide");
+			_default.sex = sex.length===0 || circle ? "" : sex.val();
 			_default.mobilePhone = Element.find("input[name='mobilePhone']")[index].value;
-			_default.degree = Element.find(".selection[data-type='degree']")[index].innerHTML;
+			_default.degree = Element.find(".selection[data-type='degree']")[index].value;
 
 			switch(index){
 				case 0 :
 					_default.train.qq = Element.find("input[name='qq']").val();
 					_default.train.email = Element.find("input[name='email']").val();
-					_default.train.learningGoal = Element.find(".selection[data-type='learningGoal']").html();
+					_default.train.learningGoal = Element.find(".selection[data-type='learningGoal']").val();
 					_learningChannel = Element.find("#learningChannel input:checkbox:checked");
 					if(_learningChannel.length)
 					{
@@ -135,12 +136,12 @@
 
 					_default.competition.ID = Element.find("input[name='ID']").val();
 					_default.competition.unit = Element.find(".competition input[name='unit']").val();
-					_default.competition.area = Element.find(".selection[data-type='area']").html();
+					_default.competition.area = Element.find(".selection[data-type='area']").val();
 					_default.competition.phone = Element.find(".competition input[name='phone']").val();
 					var workType = Element.find(".competition input:checkbox:checked");
 					_default.competition.workType = workType.length === 0 ? "":workType.val();
-					_default.competition.certificate = Element.find(".selection[data-type='certificate']").html();
-					_default.competition.seniority = Element.find(".selection[data-type='seniority']").html();
+					_default.competition.certificate = Element.find(".selection[data-type='certificate']").val();
+					_default.competition.seniority = Element.find(".selection[data-type='seniority']").val();
 					break;
 			}
 		},
@@ -297,9 +298,8 @@
 							
 							if(!_this.default.flag)
 								return;
-
 							$.ajax({
-								url:"http://www.guozewei.cn/form",
+								url:URL+"/form",
 								type:'post',
 								data:{
 									type:0,
@@ -330,7 +330,7 @@
 							if(!_this.default.flag)
 								return;
 							$.ajax({
-								url:"http://www.guozewei.cn/form",
+								url:URL+"/form",
 								type:"post",
 								data:{
 									type:1,
@@ -411,7 +411,7 @@
 	    },
 	    clearInput:function(_this){
 	    	_this.element.find("input[type='text']").val("");
-	    	_this.element.find(".selection").html("--请选择--");
+	    	_this.element.find(".selection").val("--请选择--");
 			_this.element.find(".sex .circle").addClass("hide");
 			_this.element.find("input:checkbox").prop("checked",false);
 	    } 

@@ -4,3 +4,4 @@ require('./style/pageartical.scss')
 
 
 new GetArticle();
+

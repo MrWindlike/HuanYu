@@ -2,7 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>在线报名</title>
+	<script type="text/javascript">
+		if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE6.0") 
+		{ 
+			alert("IE 6.0");
+		} 
+		else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE7.0") 
+		{ 
+			alert("IE 7.0");
+		} 
+		else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE8.0") 
+		{ 
+			alert("IE 8.0");
+			location.assign('./error.html');
+		}
+	</script>
 </head>
 <body>
 	<div id="header"></div>
@@ -66,22 +81,19 @@
 				</div>
 				<div class="block">
 					<span class="degree">文化程度</span>
-					<div class="container"  style="position: absolute;z-index: 4;">
-						<div class="select" style="margin-bottom: 0">
-							<div class="selectIcon iconfont">&#xe620;</div>
-							<div class="selection"  data-type = "degree">--请选择--</div>
-							<div style="transform: translate(0);">
-								<div class="option">初中</div>
-								<div class="option">高中</div>
-								<div class="option">中技</div>
-								<div class="option">中专</div>
-								<div class="option">高技</div>
-								<div class="option">大专</div>
-								<div class="option">本科</div>
-								<div class="option">研究生</div>
-								<div class="option">博士</div>
-							</div>
-						</div>
+					<div class="container">
+						<select class="selection"  data-type = "degree">
+							<option value="--请选择--" class="option">--请选择--</option>
+							<option value="初中" class="option">初中</option>
+							<option value="高中" class="option">高中</option>
+							<option value="中技" class="option">中技</option>
+							<option value="中专" class="option">中专</option>
+							<option value="高技" class="option">高技</option>
+							<option value="大专" class="option">大专</option>
+							<option value="本科" class="option">本科</option>
+							<option value="研究生" class="option">研究生</option>
+							<option value="博士" class="option">博士</option>
+						</select>
 					</div>
 					<div class="bubble-box arrow-top hide" style="top: 28px" data-type = "degree"> 
 						<div class="wrap">至少选择一个</div> 
@@ -89,17 +101,14 @@
 				</div>
 				<div class="block">
 					<span class="learningGoal">学习目的</span>
-					<div class="container"  style="position: absolute;z-index: 3">
-						<div class="select" style="margin-bottom: 0">
-							<div class="selectIcon iconfont">&#xe620;</div>
-							<div class="selection" data-type = "learningGoal">--请选择--</div>
-							<div style="transform: translate(0);">
-								<div class="option">就业</div>
-								<div class="option">创业</div>
-								<div class="option">能力提升</div>
-								<div class="option">职业鉴定</div>
-							</div>
-						</div>
+					<div class="container">
+						<select class="selection" data-type = "learningGoal">
+							<option value="--请选择--" class="option">--请选择--</option>
+							<option value="就业" class="option">就业</option>
+							<option value="创业" class="option">创业</option>
+							<option value="能力提升" class="option">能力提升</option>
+							<option value="职业鉴定" class="option">职业鉴定</option>
+						</select>
 					</div>
 					<div class="bubble-box arrow-top hide" style="top: 35px;left: 79px;z-index: 1"  data-type = "learningGoal"> 
 						<div class="wrap">至少选择一个</div> 
@@ -178,7 +187,7 @@
 						<div class="wrap">身份证输入错误</div> 
 					</div> 
 				</div>
-				<div class="block">
+				<div>
 					单 　　位
 					<input type="text" name="unit">
 					 <div class="bubble-box arrow-top hide"  data-type = "unit"> 
@@ -187,40 +196,34 @@
 				</div>
 				<div class="block">
 					<span class="area">户口区域</span>
-					<div class="container"  style="position: absolute; z-index: 7">
-						<div class="select" style="margin-bottom: 0">
-							<div class="selectIcon iconfont">&#xe620;</div>
-							<div class="selection" data-type = "area">--请选择--</div>
-							<div style="transform: translate(0);">
-								<div class="option">深圳市内</div>
-								<div class="option">广东省内深圳市外</div>
-								<div class="option">广东省外</div>
-								<div class="option">境外</div>
-							</div>
-						</div>
+					<div class="container">
+						<select class="selection" data-type = "area">
+							<option value="--请选择--" class="option">--请选择--</option>
+							<option value="深圳市内" class="option">深圳市内</option>
+							<option value="广东省内深圳市外" class="option">广东省内深圳市外</option>
+							<option value="广东省外" class="option">广东省外</option>
+							<option value="境外" class="option">境外</option>
+						</select>
 					</div>
-					 <div class="bubble-box arrow-top hide" style="top: 21px;left: 210px;"  data-type = "area"> 
+					<div class="bubble-box arrow-top hide" style="top: 21px;left: 210px;"  data-type = "area"> 
 						<div class="wrap">至少选择一个</div> 
 					</div> 
 				</div>
 				<div class="block">
 					<span class="degree">文化程度</span>
-					<div class="container"  style="position: absolute;z-index: 6">
-						<div class="select" style="margin-bottom: 0">
-							<div class="selectIcon iconfont">&#xe620;</div>
-							<div class="selection" data-type = "degree">--请选择--</div>
-							<div style="transform: translate(0);">
-								<div class="option">初中</div>
-								<div class="option">高中</div>
-								<div class="option">中技</div>
-								<div class="option">中专</div>
-								<div class="option">高技</div>
-								<div class="option">大专</div>
-								<div class="option">本科</div>
-								<div class="option">研究生</div>
-								<div class="option">博士</div>
-							</div>
-						</div>
+					<div class="container">
+						<select class="selection" data-type = "degree">
+							<option value="--请选择--" class="option">--请选择--</option>
+							<option value="初中" class="option">初中</option>
+							<option value="高中" class="option">高中</option>
+							<option value="中技" class="option">中技</option>
+							<option value="中专" class="option">中专</option>
+							<option value="高技" class="option">高技</option>
+							<option value="大专" class="option">大专</option>
+							<option value="本科" class="option">本科</option>
+							<option value="研究生" class="option">研究生</option>
+							<option value="博士" class="option">博士</option>
+						</select>
 					</div>
 					<div class="bubble-box arrow-top hide" style="top:30px"  data-type = "degree"> 
 						<div class="wrap">至少选择一个</div> 
@@ -247,19 +250,16 @@
 				</div>
 				<div class="block">
 					<span class="certificate">现有资格证书</span>
-					<div class="container"  style="position: absolute;z-index: 5">
-						<div class="select" style="margin-bottom: 0">
-							<div class="selectIcon iconfont">&#xe620;</div>
-							<div class="selection" data-type = "certificate">--请选择--</div>
-							<div style="transform: translate(0);">
-								<div class="option">无等级</div>
-								<div class="option">初级</div>
-								<div class="option">中级</div>
-								<div class="option">高级</div>
-								<div class="option">技师</div>
-								<div class="option">高级技师</div>
-							</div>
-						</div>
+					<div class="container">
+						<select class="selection" data-type = "certificate">
+							<option value="--请选择--" class="option">--请选择--</option>
+							<option value="无等级" class="option">无等级</option>
+							<option value="初级" class="option">初级</option>
+							<option value="中级" class="option">中级</option>
+							<option value="高级" class="option">高级</option>
+							<option value="技师" class="option">技师</option>
+							<option value="高级技师" class="option">高级技师</option>
+						</select>
 					</div>
 					<div class="bubble-box arrow-top hide" style="top: 29px;left: 210px;" data-type = "certificate"> 
 						<div class="wrap">至少选择一个</div> 
@@ -267,23 +267,20 @@
 				</div>
 				<div class="block">
 					<span class="seniority">本工种年龄</span>
-					<div class="container"  style="position: absolute;z-index: 4">
-						<div class="select" style="margin-bottom: 0">
-							<div class="selectIcon iconfont">&#xe620;</div>
-							<div class="selection" data-type = "seniority">--请选择--</div>
-							<div style="transform: translate(0);">
-								<div class="option">0</div>
-								<div class="option">1</div>
-								<div class="option">2</div>
-								<div class="option">3</div>
-								<div class="option">4</div>
-								<div class="option">5</div>
-								<div class="option">6</div>
-								<div class="option">7</div>
-								<div class="option">8</div>
-								<div class="option">9</div>
-							</div>
-						</div>
+					<div class="container">					
+						<select class="selection" data-type = "seniority">
+							<option value="--请选择--" class="option">--请选择--</option>
+							<option value="0" class="option">0</option>
+							<option value="1" class="option">1</option>
+							<option value="2" class="option">2</option>
+							<option value="3" class="option">3</option>
+							<option value="4" class="option">4</option>
+							<option value="5" class="option">5</option>
+							<option value="6" class="option">6</option>
+							<option value="7" class="option">7</option>
+							<option value="8" class="option">8</option>
+							<option value="9" class="option">9</option>
+						</select>
 					</div>
 					<div class="bubble-box arrow-top hide" style="top: 30px;"  data-type = "seniority"> 
 						<div class="wrap">至少选择一个</div> 
@@ -294,7 +291,7 @@
 					<div class="title">注意事项：</div>
 					<div class="item">1、请学员认真填好相关信息后，如有填错而报名不成功，后果自负；</div>
 					<div class="item">2、本报名表为网络报名所用，只收集学员信息，学员需准备好身份证复印件一份、大一寸蓝底彩照一张及大一寸黑白证件照一张，报名截止至3月初，请将报名资料于3月前交予本培训中心工作人员</div>
-					<div class="item">3、带“*”为必填项。</div>
+					<!-- <div class="item">3、带“*”为必填项。</div> -->
 				</div>
 			</form><!-- 
 		 --><div class="result hide">
@@ -360,36 +357,6 @@
 				<div class="closeButton iconfont">&#xe736;</div>
 			</div>
 	</div>
-	<div class="footer">
-		<div class="flexBox">
-			<div class="left">
-				<div class="code"></div>环宇培训中心创新办学理念，大力推行与企业及大专院校的人才培养及输出战略合作，采取社会招生、 定单培训、联合办学、政府企业委培、专题讲座等培训方式多层次全方位开展教学。
-			</div><!-- 
-			 --><div class="center">
-				<div class="logo"></div>
-				<div class="title">深圳市创新工匠投资咨询有限公司</div>
-			</div><!-- 
-			 --><div class="right">
-			 		<div class="title">友情链接</div>
-					<ul>						
-						<li><a href="">中网互联</a></li>
-						<li><a href="">百年教育网</a></li>
-						<li><a href="">幸福家庭网</a></li>
-						<li><a href="">教育大论文网</a></li>
-					</ul>
-					<ul>
-						<li><a href="">深圳市职业培训网</a></li>
-						<li><a href="">整合网络营销</a></li>
-						<li><a href="">华艺名教育网</a></li>
-						<li><a href="">天天电脑学习网</a></li>
-						
-					</ul>
-			</div>
-		</div>
-		<div class="message">
-			<div class="link">在线客服QQ：362628685 2540915119</div> / <div class="link">电话：0755-82780808</div> / <div class="link">邮箱：huanyuzypeixun@163.com</div>
-			<div class="description">粤ICO备09185067号</div>
-		</div>
-	</div>
+	<div class="footer"></div>
 </body>
 </html>

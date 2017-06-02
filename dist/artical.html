@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学校资讯</title>
+    <script type="text/javascript">
+        if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE6.0") 
+        { 
+            alert("IE 6.0");
+        } 
+        else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE7.0") 
+        { 
+            alert("IE 7.0");
+        } 
+        else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE8.0") 
+        { 
+            alert("IE 8.0");
+            location.assign('./error.html');
+        }
+    </script>
+<link href="./css/artical.css" rel="stylesheet"></head>
+<body>
+<div id="header"></div>
+<div id="nav" data-index="5"></div>
+<header class="top">
+    <div class="top">
+        <span class="iconfont">&#xe600;</span>
+        <span class="word">企业动态</span>
+        <span class="iconfont">&#xe60a;</span>
+        <span class="iconfont">&#xe617;</span>
+        <span class="word">学校资讯</span>
+    </div>
+</header>
+
+<div id="container" class="clearfix main_wrap">
+    <div class="main">
+        <div class="content_wrap">
+            <div class="artical clearfix">
+            </div>
+        </div>
+        <div class="more">
+            <span>加载更多</span>
+            <div class="loadding">
+                <img src="dist/assets/img/loadding.gif" alt="加载中">
+            </div>
+        </div>
+    </div>
+
+    <div class="right clearfix">
+        <img src="dist/assets/img/one.jpg" alt="正在加载">
+        <img src="dist/assets/img/two.jpg" alt="正在加载">
+    </div>
+</div>
+<div id="bg">
+    <div class="loggin">
+        <div class="title">登录</div>
+        <label class="inputWrap">
+            <input type="text" class="input">
+            <div class="text"><i class="iconfont">&#xe606;</i> 账号</div>
+            <div class="alert"></div>
+        </label>
+        <label class="inputWrap">
+            <input type="password" class="input">
+            <div class="text"><i class="iconfont">&#xe603;</i> 密码</div>
+            <div class="alert"></div>
+        </label>
+
+        <a href="loggin.html" class="link">注册</a>
+        <svg width="270" height="54" xmlns="http://www.w3.org/2000/svg">
+            <g id="button">
+                <rect x="1.5" y="2" width="268" height="50" ry="25" class="rect">
+                    
+                    <animate id="click" attributeName="width" attributeType="XML" from="268" to="50" begin="indefinite" dur="0.3s" fill="freeze" restart="never"/>
+                    <animate attributeName="x" attributeType="XML" from="1.5" to="110" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+                    <animate attributeName="stroke" attributeType="XML" from="#19CC94" to="gray" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+                    <animate attributeName="fill" attributeType="XML" from="white" to="white" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+                    
+                    <animate id="ok" attributeName="width" attributeType="XML" from="50" to="99%" begin="load.end" dur="0.3s" fill="freeze"/>
+                    <animate attributeName="x" attributeType="XML" from="110" to="1.5" begin="load.end" dur="0.3s" fill="freeze"/>
+                    <animate attributeName="stroke" attributeType="XML" from="gray" to="#19CC94" begin="load.end" dur="0.01s" fill="freeze"/>
+                    <animate attributeName="fill" attributeType="XML" from="white" to="#19CC94" begin="load.end" dur="0.01s" fill="freeze"/>
+                </rect>
+
+                <text x="45%" y="32" class="text">
+                    登录
+                    <animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="click.begin" dur="0.01s" fill="freeze" restart="never"/>
+                </text>
+            </g>
+
+            <path d="M135,2,A25,25,0,1,1,134.9,2" id="circle">
+                <animate id="load" attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="click.end" dur="1s" fill="freeze"/>
+                <animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="load.end" dur="0.01s" fill="freeze"/>
+            </path>
+
+            <polyline points="120 25, 135 40, 160 15" class="arrow">
+                <animate attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="ok.end" dur="0.5s" fill="freeze"/>
+            </polyline>
+        </svg>
+        <div class="closeButton iconfont">&#xe736;</div>
+    </div>
+</div>
+<div class="footer"></div>
+<script type="text/javascript" src="./js/vendors.js"></script><script type="text/javascript" src="./js/artical.js"></script></body>
+</html>

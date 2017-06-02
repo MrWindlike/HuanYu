@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>公司简介</title>
+	<script type="text/javascript">
+		if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE6.0") 
+		{ 
+			alert("IE 6.0");
+		} 
+		else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE7.0") 
+		{ 
+			alert("IE 7.0");
+		} 
+		else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE8.0") 
+		{ 
+			alert("IE 8.0");
+			location.assign('./error.html');
+		}
+	</script>
+<link href="./css/introduce.css" rel="stylesheet"></head>
+<body>
+<div id="header"></div>
+	<div id="nav" data-index="5">
+	</div>
+	<div class="main_img">
+		<img src="./dist/assets/img/3.jpg" alt="Loading">
+	</div>
+	<div class="wrap clearfix">
+		
+		<div id="way">
+			<div class="name">成才之路</div>
+				<div class="circle"><div class="one clearfix"><span class="iconfont">&#xe63c;</span></div></div>
+				<div class="arror clearfix"><span class="iconfont">&#xe60c;</span></div>
+				<div class="circle"><div class="two clearfix"><span class="iconfont">&#xe646;</span></div></div>
+				<div class="arror clearfix"><span class="iconfont">&#xe60c;</span></div>
+				<div class="circle"><div class="three clearfix"><span class="iconfont">&#xe71f;</span></div></div>
+				<div class="arror clearfix"><span class="iconfont">&#xe60c;</span></div>
+				<div class="circle"><div class="four clearfix"><span class="iconfont">&#xe671;</span></div></div>
+				<div class="word">
+					<span>报名学习</span>
+					<span>项目培训</span>
+					<span>技能大赛</span>
+					<span>创业服务</span>
+				</div>
+		</div>
+
+		<div id="introduce">
+			<div class="name">公司简介</div>
+			<div class="content">
+				<p>深圳市福田区环宇职业培训中心于2001年正式成立,深圳市龙华新区环宇职业培训中心于2015年正式成立。两家培训中心办公教学面积3000多平米，教学服务团队50多人人，专兼职教师103名，历经几届领导班子努力创办至今，为社会年培训各类人才数量达到15000多人次，培训中心采用线上线下全方位，多层次教学模式，以“用心培育人才，优质服务社会，专业打造品牌，成就人才梦想”的办学理念，用严谨的教学态度建立了一套与市场对接的课程体系和培训模式，配备了具有丰富的理论教学和实操经验的师资队伍，教学设备设施齐全、先进，教学和管理模式创新求实， 秉承不断创新的开拓精神，竭力为社会培养高素质的专业化人才，学校全体教职员工细致、专业的优质服务和各领域师资高水平的教学质量深受学员和企业的高度认可。</p>
+			</div>
+
+			<div class="img clearfix">
+				<div class="img1"><img src="./dist/assets/img/one.jpg" alt="Loading"></div>
+				<div class="link"><span class="iconfont">&#xe60d;</span></div>
+				<div class="img2"><img src="./dist/assets/img/two.jpg" alt="Loading"></div>
+			</div>
+		</div>
+	</div>
+	<div id="bg">
+			<div class="loggin">
+				<div class="title">登录</div>
+				<label class="inputWrap">	
+					<input type="text" class="input iconfont">
+					<div class="text iconfont">&#xe606; 账号</div>
+					<div class="alert"></div>
+				</label>
+				<label class="inputWrap">
+					<input type="password" class="input iconfont">
+					<div class="text iconfont">&#xe603; 密码</div>
+					<div class="alert"></div>
+				</label>
+				
+				<a href="loggin.html" class="link">注册</a>
+				<svg width="270" height="54" xmlns="http://www.w3.org/2000/svg">
+					<g id="button">
+						<rect x="1.5" y="2" width="268" height="50" ry="25" class="rect">
+							
+							<animate id="click" attributeName="width" attributeType="XML" from="268" to="50" begin="indefinite" dur="0.3s" fill="freeze" restart="never"/>
+							<animate attributeName="x" attributeType="XML" from="1.5" to="110" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+							<animate attributeName="stroke" attributeType="XML" from="#19CC94" to="gray" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+							<animate attributeName="fill" attributeType="XML" from="white" to="white" begin="click.begin" dur="0.3s" fill="freeze" restart="never"/>
+							
+							<animate id="ok" attributeName="width" attributeType="XML" from="50" to="99%" begin="load.end" dur="0.3s" fill="freeze"/>
+							<animate attributeName="x" attributeType="XML" from="110" to="1.5" begin="load.end" dur="0.3s" fill="freeze"/>
+							<animate attributeName="stroke" attributeType="XML" from="gray" to="#19CC94" begin="load.end" dur="0.01s" fill="freeze"/>
+							<animate attributeName="fill" attributeType="XML" from="white" to="#19CC94" begin="load.end" dur="0.01s" fill="freeze"/>
+						</rect>
+
+						<text x="45%" y="32" class="text">
+						登录
+							<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="click.begin" dur="0.01s" fill="freeze" restart="never"/>
+						</text>
+					</g>
+
+					<path d="M135,2,A25,25,0,1,1,134.9,2" id="circle">
+						<animate id="load" attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="click.end" dur="1s" fill="freeze"/>
+						<animate attributeName="stroke-opacity" attributeType="XML" from="1" to="0" begin="load.end" dur="0.01s" fill="freeze"/>
+					</path>
+
+					<polyline points="120 25, 135 40, 160 15" class="arrow">
+						<animate attributeName="stroke-dashoffset" attributeType="XML" from="200" to="0" begin="ok.end" dur="0.5s" fill="freeze"/>
+					</polyline>
+				</svg>
+				<div class="closeButton iconfont">&#xe736;</div>
+			</div>
+		</div>  
+	<div class="footer"></div>
+<script type="text/javascript" src="./js/vendors.js"></script><script type="text/javascript" src="./js/introduce.js"></script></body>
+</html>

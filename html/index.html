@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>深圳市创新工匠投资咨询有限公司</title>
 	<!-- <link rel="stylesheet" type="text/css" href="./dist/styles.css"> -->
 	<script type="text/javascript">
 		if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE6.0") 
@@ -16,6 +16,7 @@
 		else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE8.0") 
 		{ 
 			alert("IE 8.0");
+			location.assign('./error.html');
 		}
 	</script>
 </head>
@@ -32,52 +33,52 @@
 		<h3>热门课程</h3>
 		<div class="hotCourses">
 			<ul class="top">
-				<li>
+				<li class="safeManager">
 					<div class="wrapper"><i class="iconfont">&#xe645;</i>食品安全管理</div>
 				</li><!-- 
 				 -->
-				<li>
+				<li class="resourceManager">
 					<div class="wrapper"><i class="iconfont">&#xe609;</i>人力资源管理</div>
 				</li><!-- 
 				 -->
-				<li>
+				<li class="laborRalation">
 					<div class="wrapper"><i class="iconfont">&#xe691;</i>劳动关系协调</div>
 				</li><!-- 
 				 -->
-				<li>
+				<li class="NutritionRecipe">
 					<div class="wrapper"><i class="iconfont">&#xe73f;</i>营养配餐员</div>
 				</li>
 			</ul>
 			<ul class="bottom">
-				<li>
+				<li class="publicNutritionist">
 					<div class="wrapper"><i class="iconfont">&#xe625;</i>公共营养师</div>
 				</li><!-- 
 				 -->
-				<li>
+				<li class="skillTraining">
 					<div class="wrapper"><i class="iconfont">&#xe602;</i>创业技能培训</div>
 				</li><!-- 
 				 -->
-				<li>
+				<li class="eCommerce">
 					<div class="wrapper"><i class="iconfont">&#xe640;</i>电子商务运营</div>
 				</li><!-- 
 				 -->
-				<li>
+				<li class="hairdresser">
 					<div class="wrapper"><i class="iconfont">&#xe681;</i>美发师</div>
 				</li>
 			</ul>
 		</div>
 
-		<h3>最新动态</h3>
+		<h3>最新消息</h3>
 		<div class="message_part clearbox">
 			<section class="column">
 				<div>
 					<img src="../dist/assets/img/column1.png">
 				</div>
-				<h2>最新动态</h2>
+				<h2>最新消息</h2>
 				<ul class="lists news">
 
 				</ul>
-				<span class="seemore"><a href="/artical.html">查看更多<i class="iconfont icon">&#xe60a;</i></a></span>
+				<span class="seemore"><a href="/artical.html?type=newMessage">查看更多<i class="iconfont icon">&#xe60a;</i></a></span>
 			</section>
 			<section class="column">
 				<div>
@@ -87,7 +88,7 @@
 				<ul class="lists course">
 
 				</ul>
-				<span class="seemore"><a href="/artical.html">查看更多<i class="iconfont icon">&#xe60a;</i></a></span>
+				<span class="seemore"><a href="/artical.html?type=newclass">查看更多<i class="iconfont icon">&#xe60a;</i></a></span>
 			</section>
 			<section class="column">
 				<div>
@@ -96,7 +97,7 @@
 					<h2>近期活动</h2>
 				<ul class="lists active">
 				</ul>
-				<span class="seemore"><a href="/artical.html">查看更多<i class="iconfont icon">&#xe60a;</i></a></span>
+				<span class="seemore"><a href="/artical.html?type=newactive">查看更多<i class="iconfont icon">&#xe60a;</i></a></span>
 			</section>
 		</div>
 		<aside class="consult_part">
@@ -174,44 +175,7 @@
 			<div class="closeButton iconfont">&#xe736;</div>
 		</div>
 	</div>
-	<div class="footer">
-		<div class="flexBox">
-			<div class="left">
-				<div class="code"></div>
-				环宇培训中心创新办学理念，大力推行与企业及大专院校的人才培养及输出战略合作，采取社会招生、 定单培训、联合办学、政府企业委培、专题讲座等培训方式多层次全方位开展教学。
-			</div><!-- 
-			 -->
-			<div class="center">
-				<div class="logo"></div>
-				<div class="title">深圳市创新工匠投资咨询有限公司</div>
-			</div><!-- 
-			 -->
-			<div class="right">
-				<div class="title">友情链接</div>
-				<ul>
-					<li><a href="">中网互联</a></li>
-					<li><a href="">百年教育网</a></li>
-					<li><a href="">幸福家庭网</a></li>
-					<li><a href="">教育大论文网</a></li>
-				</ul>
-				<ul>
-					<li><a href="">深圳市职业培训网</a></li>
-					<li><a href="">整合网络营销</a></li>
-					<li><a href="">华艺名教育网</a></li>
-					<li><a href="">天天电脑学习网</a></li>
-
-				</ul>
-			</div>
-		</div>
-		<div class="message">
-			<div class="link">在线客服QQ：362628685 2540915119</div>
-			/
-			<div class="link">电话：0755-82780808</div>
-			/
-			<div class="link">邮箱：huanyuzypeixun@163.com</div>
-			<div class="description">粤ICO备09185067号</div>
-		</div>
-	</div>
+	<div class="footer"></div>
 </body>
 	
 </html>

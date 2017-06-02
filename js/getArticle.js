@@ -8,7 +8,7 @@
 '            </div>',
 '            <div class="middle">',
 '                <div class="title">',
-'                    <a target="_blank" href="http://localhost:63342/artical/view.html?id={{_id}}">{{title}}</a>',
+'                    <a target="_blank" href=/view.html?id={{_id}}>{{title}}</a>',
 '                </div>',
 '                <div class="detail">',
 '                    <span>发布者:{{publisher}}</span>',
@@ -16,7 +16,7 @@
 '                </div>',
 '                <div class="content">',
 '                    <p> {{content}}',
-'                        <a target="_blank" href="http://localhost:63342/artical/view.html?id={{_id}}">[显示详情]</a></p>',
+'                        <a target="_blank" href=/view.html?id={{_id}}>[显示详情]</a></p>',
 '                </div>',
 '            </div>',
 '        </div>'].join("");
@@ -50,11 +50,20 @@
             return data + newtime + minute;
         },
         getData: function () {              //获取数据
+            var re = /new(.+)$/g;
+            var search = window.location.search;
+            var match = search.match(re) && search.match(re)[0];
+            if(match === null)
+                type = {};
+            else
+                var type = match == "newMessage" ? "最新消息" : match == "newclass" ? "近期开班" : "近期活动";
+
             var _this = this;
             $.ajax({
                 type: "POST",
-                url: "http://www.guozewei.cn/article",
+                url: "http://118.89.30.149/allArticle",
                 data: {
+                    type:type,
                     page: _this.page,
                     limit: _this.limit
                 },
@@ -76,8 +85,10 @@
                                 temp = temp.replace("{{month}}", _this.getMonth(str.slice(5, 7)));
                                 temp = temp.replace("{{day}}", str.slice(8, 10));
                                 temp = temp.replace("{{time}}", _this.timeChange(str));
-                            }
-                            else {
+                            }else if(key === "_id"){
+                                var re = /{{_id}}/g;
+                                temp = temp.replace(re, data[i][key]);
+                            }else {
                                 temp = temp.replace("{{" + key + "}}", data[i][key]);
                             }
                         }

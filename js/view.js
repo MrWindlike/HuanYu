@@ -1,23 +1,26 @@
-(function ($) {
-    var TEMPLATE = `
-         <div class="left">
-                    <span class="date">{{day}}</span><br>
-                    <span class="month">{{month}}</span><br>
-                    <span class="year">{{year}}</span>
-                </div>
-                
-                <div class="middle">
-                    <div class="title">
-                        <a href="javascript:;">{{title}}</a>
-                    </div>
-                    <div class="detail">
-                        <span>发布者:{{publisher}}</span>
-                        <span>发布时间：{{time}}</span>
-                    </div>
-                    <div class="content">
-                       {{content}}
-                    </div>
-                </div>`;
+﻿(function ($) {
+    var TEMPLATE = ['  <div class="left">',
+        '                    <span class="date">{{day}}</span><br>',
+        '                    <span class="month">{{month}}</span><br>',
+        '                    <span class="year">{{year}}</span>',
+        '                </div>',
+        '                ',
+        '                <div class="middle">',
+        '                    <div class="title">',
+        '                        <a href="javascript:;">{{title}}</a>',
+        '                    </div>',
+        '                    <div class="detail">',
+        '                        <span>发布者:{{publisher}}</span>',
+        '                        <span>发布时间：{{time}}</span>',
+        '                    </div>',
+        '                    <div class="content">',
+        '                       {{content}}',
+        '                    </div>',
+        '                </div>'].join("");
+    var other = ['<div class="more">',
+        '        <span>上一篇</span><a href={{prevsrc}}>{{prev}}</a><br>',
+        '        <span>下一篇</span><a href={{nextsrc}}>{{next}}</a>',
+        '        </div>'].join("");
     var monthArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
     function ShowArticle() {
@@ -27,8 +30,8 @@
 
     ShowArticle.prototype = {
         init: function () {
-
             this.getArticle();
+            this.getOther();
         },
         getMonth: function (month) {       //把日期转为英文显示
             return monthArr[parseInt(month)];
@@ -45,7 +48,7 @@
             var url = window.location.search.slice(4);
             console.log(url);
             $.ajax({
-                url: "http://www.guozewei.cn/detail",
+                url: URL + "/detail",
                 type: "POST",
                 data: {
                     _id: url
@@ -82,7 +85,33 @@
                     $(".artical").append(temp);
                 }
             });
+        },
+        getOther: function () {                //获取上一篇和下一篇信息
+            var url = window.location.search.slice(4);
+            $.ajax({
+                url: URL + "/preANDnext",
+                type: "POST",
+                data: {
+                    type: "最新消息",
+                    _id: url
+                },
+                success: function (data) {
+                    var temp = other;
+                    var prev = data.prev === "" ? "没有更多内容了" : data.prev.title;
+                    var next = data.next === "" ? "没有更多内容了" : data.next.title;
+                    temp = temp.replace("{{prev}}", prev);
+                    temp = temp.replace("{{next}}", next);
+                    var prevsrc = data.prev === "" ? "javascript:void(0);" : "/view.html?id=" + data.prev._id;
+                    var nextsrc = data.next === "" ? "javascript:void(0);" : "/view.html?id=" + data.next._id;
+                    console.log(prevsrc)
+                    console.log(nextsrc)
+                    temp = temp.replace("{{prevsrc}}", prevsrc);
+                    temp = temp.replace("{{nextsrc}}", nextsrc);
+                    $(".main").append(temp);
+                }
+            });
         }
     }
     window.ShowArticle = ShowArticle;
 })(window.jQuery)
+

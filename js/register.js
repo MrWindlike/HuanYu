@@ -21,7 +21,7 @@
 		_eventInit : function(){
 			var $password = this.element.find('[data-type|="password"]');
 			var inputs = this.element.find('.input');
-			var url = "http://www.guozewei.cn/test";
+			var url = URL+"/test";
 			var _this = this;
 			this.element.find('[data-type!="password"]').on('blur', function(){
 				var _this = this;
@@ -144,7 +144,7 @@
 				if(!flag)
 					return ;
 				$.ajax({
-					url : "http://www.guozewei.cn/resister",
+					url : URL+"/resister",
 					type: "POST",
 					dataType : "JSON",
 					data:{

@@ -1,73 +1,269 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "../";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
-/******/ })
-/************************************************************************/
-/******/ ([
+webpackJsonp([3],[
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function () {
+
+	__webpack_require__(1);
+	__webpack_require__(5);
+	__webpack_require__(4);
+	__webpack_require__(3);
+	__webpack_require__(2);
+
+	window.Cookies = __webpack_require__(8);
+	window.$ = window.jQuery = __webpack_require__(10);
+	window.URL = './';
+	__webpack_require__(7);
+
+	var header = {
+		template: ['<div class="headerWrap">', '        <div class="logo">', '            <img src="./dist/assets/img/logo.png" style="margin-right:1em;" width="60px"><span class="name">深圳市创新工匠投资咨询有限公司</span>', '        </div>', '        <div class="logButton" href="loggin.html">登录/注册</div>', '        <div class="user">', '            <div class="username iconfont">Windlike &#xe620;</div>', '            <div class="menus">', '                <div class="menu iconfont">&#xe60e; 注销</div>', '            </div>', '        </div>', '    </div>'].join("")
+	};
+	$('#header').Use(header);
+	window.nav = {
+		template: ['<div id="navs">', '				', '				<span class="text iconfont" style="float:right">&#xe60b; 咨询电话:0755-82780808</span>', '				<ul class="navs">', '					<li class="item"><a href="index.html" class="naver">首页</a>', '					</li>',
+		/*'					<li class="item"><a href="javascript:;" class="naver">创业服务</a>',
+  '						<ul>',
+  '							<li><a href="javascript:;">创业政策</a></li>',
+  '							<li><a href="javascript:;">创业项目</a></li>',
+  '							<li><a href="javascript:;">就业服务</a></li>',
+  '							<li><a href="javascript:;">招生信息</a></li>',
+  '							<li><a href="javascript:;">职业指导</a></li>',
+  '						</ul>',
+  '					</li>',*/
+		'					<li class="item"><a href="javascript:;" class="naver">培训项目</a>', '						<ul>', '							<li><a href="./view.html?id=590f2fdbd7b84e0b20b2ff2b">企业内训</a></li>',
+		//'							<li><a href="javascript:;">再就业培训</a></li>',
+		'							<li><a href="./view.html?id=590f2fdbd7b84e0b20b2ff2b">职业技能培训</a></li>', '						</ul>', '					</li>', '					<li class="item"><a href="./signUp.html" class="naver">在线报名</a>', '						<ul>', '							<li><a href="./signUp.html">培训报名</a></li>', '							<li><a href="./signUp.html?show=competition">竞赛报名</a></li>', '						</ul>', '					</li>', '					<li class="item"><a href="javascript:;" class="naver">在线学习</a>', '						<ul>', '							<li><a href="javascript:;">相关资料</a></li>', '							<li><a href="javascript:;">在线视频</a></li>', '							<li><a href="javascript:;">在线测试</a></li>', '						</ul>', '					</li>', '					<li class="item"><a href="javascript:;" class="naver">下载专区</a>', '						<ul>', '							<li><a href="javascript:;">竞赛说明</a></li>', '							<li><a href="javascript:;">竞赛报名表</a></li>', '							<li><a href="javascript:;">工作证明模板</a></li>', '							<li><a href="javascript:;">更多下载</a></li>', '						</ul>', '					</li>', '					</li>', '					<li class="item"><a href="./introduce.html" class="naver">了解环宇</a>', '						<ul>', '							<li><a href="./introduce.html">关于环宇</a></li>', '							<li><a href="./artical.html?type=all">学校资讯</a></li>', '							<li><a href="./school.html">学校风采</a></li>',
+		//'							<li><a href="javascript:;">考试指南</a></li>',
+		'						</ul>', '					</li>', '					<div class="bg"></div>', '				</ul>', '			</div>'].join("")
+	};
+	$('#nav').Use(nav);
+	var index = parseInt($('#nav').attr('data-index'));
+	$($('#nav').find('.bg')[0]).css('left', index * 110 + 'px');
+	$($('#nav').find('.naver')[index]).css('color', '#3882b0');
+
+	$('#nav').stop().mouseleave(function () {
+		$('.bg').stop().animate({ 'left': index * 110 }, 1000);
+		$('.item ul').css({ "display": "none" });
+	});
+
+	/***********input*************/
+	__webpack_require__(9);
+
+	$("#bg").input();
+	$("#register").input({ left: "0em" });
+
+	$("#bg>*:not(svg)").on("click", function (event) {
+		event.stopPropagation();
+	});
+
+	$("#bg, #bg .closeButton").on('click', function (event) {
+		$("#bg").fadeOut(300);
+		$("#bg input").val("").removeClass('input-danger');
+		$("#bg .alert").css('opacity', '0');
+		$("#bg .text").attr("style", "");
+	});
+
+	$("#header .logButton").on('click', function () {
+		$("#bg").fadeIn(300);
+	});
+
+	/*****************************/
+	/***********login*************/
+	__webpack_require__(11);
+
+	$(".loggin").login();
+	/*****************************/
+	$('.navs .item').mouseover(function () {
+		var _this = $(this);
+		$(this).find('ul').css({ "display": "block" });
+		$('.bg').stop().animate({ 'left': _this.index() * 110 + 'px' }, 100);
+		_this.find("ul").addClass('act').stop().animate({ "opacity": 1 }, 100);
+		_this.siblings().find("ul").removeClass('act').stop().animate({ "opacity": 0 }, 100);
+	});
+
+	/***********autoLogin*********/
+	var $logginButton = $('#header').find('.logButton'),
+	    $user = $('#header').find('.user');
+
+	if (Cookies.get('username')) $.ajax({
+		url: URL + "/login",
+		type: "POST",
+		dataType: "JSON",
+		data: {
+			username: Cookies.get('username'),
+			password: Cookies.get('password')
+		},
+		success: function (data) {
+			if (data.success) {
+				$logginButton.css('display', 'none');
+				$user.css('display', 'block');
+				$($user.find('.username')[0]).html(Cookies.get('username') + ' <i class="iconfont">&#xe620;</i>');
+				$user.on('mouseenter', function () {
+					$($user.find('.menus')).fadeIn(300);
+				});
+				$user.on('mouseleave', function () {
+					$($user.find('.menus')).fadeOut(300);
+				});
+
+				$user.find(".menu:contains('注销')").on('click', function () {
+
+					Cookies.unset("username");
+					Cookies.unset("password");
+					location.reload();
+				});
+			}
+		}
+
+	});
+	/*****************************/
+	/************footer***********/
+	var footer = {
+		template: ['<div class="flexBox">', '        <div class="left">', '            <div class="code"></div>', '            环宇培训中心创新办学理念，大力推行与企业及大专院校的人才培养及输出战略合作，采取社会招生、 定单培训、联合办学、政府企业委培、专题讲座等培训方式多层次全方位开展教学。', '        </div><!--', '             -->', '        <div class="center">', '            <div class="logo"></div>', '            <div class="title">深圳市创新工匠投资咨询有限公司</div>', '        </div><!--', '             -->', '        <div class="right">', '            <div class="title">友情链接</div>', '            <ul>', '                <li><a href="http://www.30c.cn/">中网互联</a></li>', '                <li><a href="http://www.beida100.com/">百年教育网</a></li>', '                <li><a href="http://www.babyschool.com.cn/zaojiao/list_9.html">幸福家庭网</a></li>', '                <li><a href="http://www.jiaoyuda.com/">教育大论文网</a></li>', '            </ul>', '            <ul>', '                <li><a href="http://www.szhuanyupeixun.com/index.asp">深圳市职业培训网</a></li>', '                <li><a href="http://www.xykj2007.net/">整合网络营销</a></li>', '                <li><a href="http://www.huayiming.com/">华艺名教育网</a></li>', '                <li><a href="http://www.xuanke114.com/">天天电脑学习网</a></li>', '            </ul>', '        </div>', '    </div>', '    <div class="message">', '        <div class="link">在线客服QQ：362628685 2540915119</div>', '        /', '        <div class="link">电话：0755-82780808</div>', '        /', '        <div class="link">邮箱：huanyuzypeixun@163.com</div>', '        <div class="description">粤ICO备09185067号</div>', '    </div>'].join("")
+	};
+
+	$('.footer').Use(footer);
+})();
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
+module.exports = __webpack_amd_options__;
+
+/* WEBPACK VAR INJECTION */}.call(exports, {}))
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+!function () {
+  var t = function (e, n) {
+    this.element = e, this.userOptions = n, this.defaultOptions = t["default"], this.options = jQuery.extend({}, this.defaultOptions, this.userOptions), this._init();
+  };t["default"] = { id: "", data: {}, components: {}, template: "" }, t.prototype = { _init: function () {
+      this.nodes = {}, this.nodes.text = {}, this.nodes.style = {}, this.element.html(this.options.template), this._dataInit(), this._eventInit();
+    }, _eventInit: function () {
+      var t = this;this.element.on("click", function () {
+        t.options.data.HelloWorld = "GoodBye", t.options.data.color = "white", t.options.data.background = "black";
+      });
+    }, _dataInit: function () {
+      for (var t in this.options.data) {
+        var e, n;e = this.element.children().length ? this.element.find(":contains({{" + t + "}})") : this.element.filter(":contains({{" + t + "}})"), this.nodes.text[t] = jQuery(e);for (var i = 0; i < e.length; i++) {
+          var s = jQuery(e[i]).html().replace(new RegExp("{{2}" + t + "}{2}", "g"), this.options.data[t]);jQuery(e[i]).data("text") || jQuery(e[i]).data("text", jQuery(e[i]).html()), jQuery(e[i]).html(s);
+        }n = this.element.children().length ? this.element.find("[style*=w-" + t + "]") : this.element.filter("[style*=w-" + t + "]"), this.nodes.style[t] = jQuery(n);for (var i = 0; i < n.length; i++) {
+          var a = jQuery(n[i]).attr("style").replace(new RegExp("w-" + t, "g"), this.options.data[t]);jQuery(n[i]).data("style") || jQuery(n[i]).data("style", jQuery(n[i]).attr("style")), jQuery(n[i]).attr("style", a);
+        }this._watchData(t);
+      }
+    }, _watchData: function (t) {
+      var e = this,
+          n = this.options.data[t];Object.defineProperty(e.options.data, t, { get: function () {
+          return n;
+        }, set: function (i) {
+          var s = function (n, s) {
+            for (var a = 0; a < n[t].length; a++) {
+              var o = jQuery(n[t][a]).data(s);"text" === s ? (o.match(/[\w]+/g).forEach(function (n) {
+                n !== t && (o = o.replace(new RegExp("{{2}" + n + "}{2}", "g"), e.options.data[n]));
+              }), o = o.replace(new RegExp("{{2}" + t + "}{2}", "g"), i), jQuery(n[t][a]).html(o)) : "style" === s && (o.match(/w-[\w]{2,}/g).forEach(function (n) {
+                n = n.substring(2), n !== t && (o = o.replace(new RegExp("w-" + n, "g"), e.options.data[n]));
+              }), o = o.replace(new RegExp("w-" + t, "g"), i), jQuery(n[t][a]).attr("style", o));
+            }
+          };e.nodes.text[t].length > 0 && s(e.nodes.text, "text"), e.nodes.style[t].length > 0 && s(e.nodes.style, "style"), n = i;
+        } });
+    }, _componentInit: function () {
+      for (component in this.components) jQuery(this.element.find(jQuery(component.id))[0]).jQuery();
+    } }, jQuery.fn.Use = function (e) {
+    return this.each(function () {
+      jQuery(this).data("Use") || jQuery(this).data("Use", new t(jQuery(this), e));
+    });
+  };
+}(jQuery);
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = function () {
+	var instance = null;
+	var cookies = function () {};
+
+	cookies.prototype = {
+		get: function (name) {
+			var cookieName = encodeURIComponent(name) + "=",
+			    cookieStart = document.cookie.indexOf(cookieName),
+			    cookieValue = null;
+
+			if (cookieStart > -1) {
+				var cookieEnd = document.cookie.indexOf(";", cookieStart);
+				if (cookieEnd == -1) cookieEnd = document.cookie.length;
+				cookieValue = decodeURIComponent(document.cookie.substring(cookieStart + cookieName.length, cookieEnd));
+			}
+
+			return cookieValue;
+		},
+
+		set: function (name, value, expires, path, domain, secure) {
+			var cookieText = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+			if (expires instanceof Date) {
+				cookieText += "; expires=" + expires.toGMTString();
+			}
+
+			if (path) {
+				cookieText += "; path=" + path;
+			}
+
+			if (domain) {
+				cookieText += "; domain=" + domain;
+			}
+
+			if (secure) {
+				cookieText += "; secure";
+			}
+
+			document.cookie = cookieText;
+		},
+
+		unset: function (name, path, domain, secure) {
+			this.set(name, "", new Date(0), path, domain, secure);
+		}
+	};
+
+	if (instance == null) instance = new cookies();
+	return instance;
+}();
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports) {
 
 
@@ -107,37 +303,7 @@
 })(jQuery);
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 6 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! jQuery v3.1.0 | (c) jQuery Foundation | jquery.org/license */
@@ -2089,7 +2255,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! jQuery v3.1.
       return this.on(b, a, c, d);
     }, undelegate: function (a, b, c) {
       return 1 === arguments.length ? this.off(a, "**") : this.off(b, a || "**", c);
-    } }), r.parseJSON = JSON.parse, "function" == "function" && __webpack_require__(7) && !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+    } }), r.parseJSON = JSON.parse, "function" == "function" && __webpack_require__(6) && !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
     return r;
   }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));var Tb = a.jQuery,
@@ -2099,68 +2265,293 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! jQuery v3.1.
 });
 
 /***/ }),
-/* 7 */
+/* 11 */
 /***/ (function(module, exports) {
 
-/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
-module.exports = __webpack_amd_options__;
+(function ($) {
+	var login = function (element, options) {
+		this.element = element;
+		this.userOptions = options;
+		this.defaultOptions = login.default;
+		this.options = $.extend({}, this.defaultOptions, this.userOptions);
+		this._init();
+		this._eventInit();
+	};
 
-/* WEBPACK VAR INJECTION */}.call(exports, {}))
+	login.default = {};
+
+	login.prototype = {
+		_init: function () {},
+		_eventInit: function () {
+			var _this = this;
+			var click = $(this.element).find("#click")[0];
+			var inputs = $(_this.element).find('.input');
+			inputs.on('blur', function () {
+				if ($(this).val() !== '') {
+					$(this).removeClass('input-danger');
+					$($(this).siblings('.alert')[0]).css('opacity', '0');
+				}
+			});
+
+			this.element.find('#button').on("click", function (event) {
+				var flag = true;
+				for (var i = 0; i < inputs.length; i++) {
+					if ($(inputs[i]).val() === '') {
+						$(inputs[i]).addClass('input-danger');
+						$($(inputs[i]).siblings('.alert')[0]).css('opacity', '1').html('请填写信息！');
+						flag = false;
+					}
+				}
+
+				if (!flag) return;
+
+				$.ajax({
+					url: URL + "/login",
+					type: "POST",
+					dataType: "JSON",
+					data: {
+						username: $(inputs[0]).val(),
+						password: $(inputs[1]).val()
+					},
+					success: function (data) {
+						if (data.success) {
+							Cookies.set("username", $(inputs[0]).val(), new Date().setDate(new Date().getDate() + 30));
+							Cookies.set("password", $(inputs[1]).val(), new Date().setDate(new Date().getDate() + 30));
+							if (click.beginElement) {
+								click.beginElement();
+								setTimeout(function () {
+									if (/loggin\.html/.test(location.href)) location.assign('index.html');else location.reload();
+								}, 2000);
+							} else {
+								if (/loggin\.html/.test(location.href)) location.assign('index.html');else location.reload();
+							}
+						} else {
+							if (data.message === '用户名不存在') {
+								$(inputs[0]).addClass('input-danger');
+								$($(inputs[0]).siblings('.alert')[0]).css('opacity', '1').html(data.message);
+							} else {
+								$(inputs[1]).addClass('input-danger');
+								$($(inputs[1]).siblings('.alert')[0]).css('opacity', '1').html(data.message);
+							}
+						}
+					}
+
+				});
+			});
+		}
+	};
+
+	$.fn.login = function (options) {
+		return this.each(function () {
+			if (!$(this).data("login")) $(this).data("login", new login($(this), options));
+		});
+	};
+})(jQuery);
 
 /***/ }),
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
 /* 12 */,
 /* 13 */,
 /* 14 */,
 /* 15 */,
 /* 16 */,
-/* 17 */
+/* 17 */,
+/* 18 */,
+/* 19 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */
+/***/ (function(module, exports) {
+
+(function ($) {
+    function Picture(options) {
+        this.init(options);
+    };
+    var TEMPLATEimg = '<div class="picture" data-index={{index}}><img src={{src}} alt="加载中"></div>'; //图集主页模板
+    var TEMPLATElist = '<li><img src={{src}}></li>'; //进入图片每个图片模板
+    var _DEFAULT = {
+        rows: 4, //图集主页每一行显示多少张图片
+        picLength: 800 //每张图片的宽度
+    };
+
+    Picture.prototype = {
+        init: function (options) {
+            this.container = options.container; //container容器
+            this.row = options.row; //获取rowDom对象
+            this.lists = options.lists; //获取listsDom对象
+            this.dots = options.dots; //获取下面的小点
+            this.btnprev = options.prev; //上一张
+            this.btnnext = options.next; //下一张
+            this.wrap = options.wrap; //遮罩
+            this.loadding = options.loadding; //加载中
+            this.showList = options.showList;
+            this.temprow = $("<div class='row'></div>"); //每一行的dom对象
+            this.getLists(); //页面一进来就加载图集主页
+            this.close(); //关闭
+            this.next(); //点击下一张事件
+            this.prev(); //点击上一张事件
+        },
+        getLists: function () {
+            var _this = this;
+            this.reqData({ "index": true }, function (data) {
+                var rows = _DEFAULT.rows;
+                var rownum = Math.floor(data.length / rows); //获取一共有多少行显示
+                for (var i = 0; i < rownum; i++) {
+                    //除最后一行外 其他进行加载
+                    var row = _this.temprow.clone(); //克隆
+                    for (var j = 0; j < rows; j++) {
+                        var temp = TEMPLATEimg; //模板
+                        temp = temp.replace("{{src}}", data[i * rows + j].img); //模板替换
+                        temp = temp.replace("{{index}}", "" + parseInt(i * rows + j) + "");
+                        row.append(temp); //添加到row中
+                    }
+                    _this.loadding.css("display", "none");
+                    _this.container.append(row); //把这一行的row添加到容器中
+                }
+                var remain = data.length - rownum * rows; //对最后一行剩下的进行添加
+                if (remain) {
+                    var row = _this.temprow.clone();
+                    for (var i = remain; i < data.length; i++) {
+                        var temp = TEMPLATEimg;
+                        temp = temp.replace("{{src}}", "" + data[i].img + "");
+                        temp = temp.replace("{{index}}", "" + i + "");
+                        row.append(temp);
+                    }
+                    _this.container.append(row);
+                }
+                _this.entryPic(); //等图集加载完再绑定事件
+            });
+            //进入图集
+        },
+        reqData: function (data, callback) {
+            $.ajax({
+                url: URL + "/getMain",
+                type: "POST",
+                data: data,
+                success: function (data) {
+                    console.log(data.length);
+                    callback(data);
+                }
+            });
+        },
+        entryPic: function () {
+            var _this = this;
+            _this.container.find(".picture").on("click", function () {
+                var index = $(this).data("index"); //获取当前点击图片索引
+                _this.container.css("display", "none");
+                _this.wrap.fadeIn();
+                _this.showList.fadeIn();
+                _this.reqData({ pos: index }, function (data) {
+                    var length = data.length > 5 ? 5 : data.length; //获取图片数量
+                    _this.showdots(length); //banner图底部dots
+                    _this.lists.css({ //改变外层ul的宽度
+                        width: _this.picLength * length + 'px'
+                    });
+                    _this.showList.find(".picloadding").css("display", "none"); //把加载按钮取消
+                    for (var i = 0; i < length; i++) {
+                        //对每张图片进行添加
+                        var temp = TEMPLATElist;
+                        temp = temp.replace("{{src}}", data[i].img);
+                        _this.lists.append(temp);
+                    }
+                    _this.dotsevent();
+                });
+            });
+        },
+        prev: function () {
+            var _this = this;
+            _this.btnnext.on("click", function () {
+                var lists = _this.lists.find("li");
+                var width = lists.width();
+                var length = lists.length;
+                var index = _this.dots.find(".active").index() + 1;
+                index = index >= length ? 0 : index;
+                _this.lists.animate({ left: -width * index }, 500);
+                if (index) _this.dots.find(".active").next().addClass("active").siblings().removeClass("active");else _this.dots.find("li").eq(0).addClass("active").siblings().removeClass("active");
+            });
+        },
+        next: function () {
+            var _this = this;
+            _this.btnprev.on("click", function () {
+                var lists = _this.lists.find("li");
+                var width = lists.width();
+                var length = lists.length;
+                var index = _this.dots.find(".active").index() - 1;
+                index = index < 0 ? length - 1 : index;
+                _this.lists.animate({ left: -width * index }, 500);
+                if (index != length - 1) _this.dots.find(".active").prev().addClass("active").siblings().removeClass("active");else _this.dots.find("li").eq(length - 1).addClass("active").siblings().removeClass("active");
+            });
+        },
+        showdots: function (length) {
+            var _this = this;
+            for (var i = 0; i < length; i++) {
+                var li = $(" <li></li>");
+                _this.dots.append(li);
+            }
+            _this.dots.find("li").eq(0).addClass("active"); //默认显示第一张
+        },
+        close: function () {
+            var _this = this;
+            _this.wrap.on("click", function (e) {
+                if (e.target === this) {
+                    _this.wrap.fadeOut();
+                    _this.showList.fadeOut();
+                    _this.lists.empty();
+                    _this.dots.empty();
+                    _this.container.fadeIn();
+                    _this.showList.find(".picloadding").css("display", "block");
+                }
+            });
+        },
+        dotsevent: function () {
+            var _this = this;
+            _this.dots.find("li").on("click", function () {
+                var width = _this.lists.find("li").width();
+                var index = $(this).index();
+                _this.lists.animate({ left: -width * index }, 500);
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+        }
+
+    };
+    $.fn["picture"] = function (options) {
+        new Picture(options);
+    };
+})(jQuery);
+
+/***/ }),
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(1);
-__webpack_require__(5);
-__webpack_require__(4);
-__webpack_require__(3);
-__webpack_require__(2);
-
-window.$ = window.jQuery = __webpack_require__(6);
-
-$('#nav').stop().mouseleave(function () {
-	$('.bg').stop().animate({ 'left': 0 }, 1000);
-	$('.item ul').css({ "display": "none" });
-});
-
-/***********loggin*************/
 __webpack_require__(0);
+__webpack_require__(26);
+__webpack_require__(19);
 
-$("#bg").input();
-$("#register").input({ left: "0em" });
-
-$("#bg>*:not(svg)").on("click", function (event) {
-	event.stopPropagation();
-});
-
-$("#bg, #bg .closeButton").on('click', function (event) {
-	$("#bg").fadeOut(300);
-	$("#bg input").val("");
-	$("#bg .text").attr("style", "");
-});
-
-$("#header .logButton").on('click', function () {
-	$("#bg").fadeIn(300);
-});
-
-/*****************************/
-$('.item').mouseover(function () {
-	var _this = $(this);
-	$(this).find('ul').css({ "display": "block" });
-	$('.bg').stop().animate({ 'left': _this.index() * 110 + 'px' }, 100);
-	_this.find("ul").addClass('active').stop().animate({ "opacity": 1 }, 100);
-	_this.siblings().find("ul").removeClass('active').stop().animate({ "opacity": 0 }, 100);
+$("container").picture({
+    "container": $(".container"),
+    "showList": $(".showLists"),
+    "loadding": $(".loadding_wrap"),
+    "wrap": $(".wrap"),
+    "prev": $("#prev"),
+    "next": $("#next"),
+    "lists": $(".lists"),
+    "dots": $(".dots")
 });
 
 /***/ })
-/******/ ]);
+],[34]);
