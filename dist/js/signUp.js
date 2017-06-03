@@ -4,16 +4,16 @@ webpackJsonp([1],[
 
 (function () {
 
-	__webpack_require__(1);
-	__webpack_require__(5);
-	__webpack_require__(4);
-	__webpack_require__(3);
-	__webpack_require__(2);
-
-	window.Cookies = __webpack_require__(8);
-	window.$ = window.jQuery = __webpack_require__(10);
-	window.URL = './';
+	__webpack_require__(6);
+	__webpack_require__(10);
+	__webpack_require__(9);
+	__webpack_require__(8);
 	__webpack_require__(7);
+
+	window.Cookies = __webpack_require__(2);
+	window.$ = window.jQuery = __webpack_require__(4);
+	window.URL = './';
+	__webpack_require__(1);
 
 	var header = {
 		template: ['<div class="headerWrap">', '        <div class="logo">', '            <img src="./dist/assets/img/logo.png" style="margin-right:1em;" width="60px"><span class="name">深圳市创新工匠投资咨询有限公司</span>', '        </div>', '        <div class="logButton" href="loggin.html">登录/注册</div>', '        <div class="user">', '            <div class="username iconfont">Windlike &#xe620;</div>', '            <div class="menus">', '                <div class="menu iconfont">&#xe60e; 注销</div>', '            </div>', '        </div>', '    </div>'].join("")
@@ -32,7 +32,7 @@ webpackJsonp([1],[
   '					</li>',*/
 		'					<li class="item"><a href="javascript:;" class="naver">培训项目</a>', '						<ul>', '							<li><a href="./view.html?id=590f2fdbd7b84e0b20b2ff2b">企业内训</a></li>',
 		//'							<li><a href="javascript:;">再就业培训</a></li>',
-		'							<li><a href="./view.html?id=590f2fdbd7b84e0b20b2ff2b">职业技能培训</a></li>', '						</ul>', '					</li>', '					<li class="item"><a href="./signUp.html" class="naver">在线报名</a>', '						<ul>', '							<li><a href="./signUp.html">培训报名</a></li>', '							<li><a href="./signUp.html?show=competition">竞赛报名</a></li>', '						</ul>', '					</li>', '					<li class="item"><a href="javascript:;" class="naver">在线学习</a>', '						<ul>', '							<li><a href="javascript:;">相关资料</a></li>', '							<li><a href="javascript:;">在线视频</a></li>', '							<li><a href="javascript:;">在线测试</a></li>', '						</ul>', '					</li>', '					<li class="item"><a href="javascript:;" class="naver">下载专区</a>', '						<ul>', '							<li><a href="javascript:;">竞赛说明</a></li>', '							<li><a href="javascript:;">竞赛报名表</a></li>', '							<li><a href="javascript:;">工作证明模板</a></li>', '							<li><a href="javascript:;">更多下载</a></li>', '						</ul>', '					</li>', '					</li>', '					<li class="item"><a href="./introduce.html" class="naver">了解环宇</a>', '						<ul>', '							<li><a href="./introduce.html">关于环宇</a></li>', '							<li><a href="./artical.html?type=all">学校资讯</a></li>', '							<li><a href="./school.html">学校风采</a></li>',
+		'							<li><a href="./view.html?id=590f2fdbd7b84e0b20b2ff2b">职业技能培训</a></li>', '						</ul>', '					</li>', '					<li class="item"><a href="./signUp.html" class="naver">在线报名</a>', '						<ul>', '							<li><a href="./signUp.html">培训报名</a></li>', '							<li><a href="./signUp.html?show=competition">竞赛报名</a></li>', '						</ul>', '					</li>', '					<li class="item"><a href="javascript:;" class="naver">在线学习</a>', '						<ul>', '							<li><a href="javascript:;">相关资料</a></li>', '							<li><a href="javascript:;">在线视频</a></li>', '							<li><a href="javascript:;">在线测试</a></li>', '						</ul>', '					</li>', '					<li class="item"><a href="javascript:;" class="naver">下载专区</a>', '						<ul>', '							<li><a href="javascript:;">竞赛说明</a></li>', '							<li><a href="javascript:;">竞赛报名表</a></li>', '							<li><a href="javascript:;">工作证明模板</a></li>', '							<li><a href="javascript:;">更多下载</a></li>', '						</ul>', '					</li>', '					</li>', '					<li class="item"><a href="./introduce.html" class="naver">了解公司</a>', '						<ul>', '							<li><a href="./introduce.html">关于公司</a></li>', '							<li><a href="./artical.html?type=all">学校资讯</a></li>', '							<li><a href="./school.html">学校风采</a></li>',
 		//'							<li><a href="javascript:;">考试指南</a></li>',
 		'						</ul>', '					</li>', '					<div class="bg"></div>', '				</ul>', '			</div>'].join("")
 	};
@@ -47,7 +47,7 @@ webpackJsonp([1],[
 	});
 
 	/***********input*************/
-	__webpack_require__(9);
+	__webpack_require__(3);
 
 	$("#bg").input();
 	$("#register").input({ left: "0em" });
@@ -69,7 +69,7 @@ webpackJsonp([1],[
 
 	/*****************************/
 	/***********login*************/
-	__webpack_require__(11);
+	__webpack_require__(5);
 
 	$(".loggin").login();
 	/*****************************/
@@ -128,45 +128,6 @@ webpackJsonp([1],[
 /* 1 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
-module.exports = __webpack_amd_options__;
-
-/* WEBPACK VAR INJECTION */}.call(exports, {}))
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
 !function () {
   var t = function (e, n) {
     this.element = e, this.userOptions = n, this.defaultOptions = t["default"], this.options = jQuery.extend({}, this.defaultOptions, this.userOptions), this._init();
@@ -209,7 +170,7 @@ module.exports = __webpack_amd_options__;
 }(jQuery);
 
 /***/ }),
-/* 8 */
+/* 2 */
 /***/ (function(module, exports) {
 
 module.exports = function () {
@@ -263,7 +224,7 @@ module.exports = function () {
 }();
 
 /***/ }),
-/* 9 */
+/* 3 */
 /***/ (function(module, exports) {
 
 
@@ -303,7 +264,7 @@ module.exports = function () {
 })(jQuery);
 
 /***/ }),
-/* 10 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! jQuery v3.1.0 | (c) jQuery Foundation | jquery.org/license */
@@ -2255,7 +2216,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! jQuery v3.1.
       return this.on(b, a, c, d);
     }, undelegate: function (a, b, c) {
       return 1 === arguments.length ? this.off(a, "**") : this.off(b, a || "**", c);
-    } }), r.parseJSON = JSON.parse, "function" == "function" && __webpack_require__(6) && !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+    } }), r.parseJSON = JSON.parse, "function" == "function" && __webpack_require__(11) && !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
     return r;
   }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));var Tb = a.jQuery,
@@ -2265,7 +2226,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! jQuery v3.1.
 });
 
 /***/ }),
-/* 11 */
+/* 5 */
 /***/ (function(module, exports) {
 
 (function ($) {
@@ -2349,22 +2310,46 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! jQuery v3.1.
 })(jQuery);
 
 /***/ }),
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */
+/* 6 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 21 */,
-/* 22 */
+/* 7 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
+module.exports = __webpack_amd_options__;
+
+/* WEBPACK VAR INJECTION */}.call(exports, {}))
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports = Check;
@@ -2423,11 +2408,11 @@ Check.prototype = {
 };
 
 /***/ }),
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */
 /***/ (function(module, exports) {
 
 (function ($) {
@@ -2848,23 +2833,46 @@ Check.prototype = {
 })(jQuery);
 
 /***/ }),
-/* 28 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 29 */,
 /* 30 */,
 /* 31 */,
 /* 32 */,
 /* 33 */,
 /* 34 */,
-/* 35 */
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(0);
-__webpack_require__(20);
+__webpack_require__(28
 /*require("./js/selection.js")*/
-var Check = __webpack_require__(22);
-__webpack_require__(27);
+);var Check = __webpack_require__(12);
+__webpack_require__(17);
 
 $("#signUp").signup(Check);
 
 /***/ })
-],[35]);
+],[43]);
